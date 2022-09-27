@@ -512,7 +512,9 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                             },
                           );
 
-                          context.pushNamed('Registrarse_formulario');
+                          //context.pushNamed('Registrarse_formulario'); //NO ME SIRVE POR EL MOMENTO
+                          Navigator.pushNamed(
+                              context, "registrarse_formulario");
                         },
                         text: 'Registrarme',
                         options: FFButtonOptions(
