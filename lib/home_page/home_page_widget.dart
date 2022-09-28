@@ -30,7 +30,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             padding: EdgeInsetsDirectional.fromSTEB(0, 4, 10, 0),
             child: InkWell(
               onTap: () {
-                Navigator.pushNamed(context, "Registrarse");
+                Navigator.pushNamed(context, "registrarse_iniciosesion");
               },
               child: Text(
                 'Omitir',

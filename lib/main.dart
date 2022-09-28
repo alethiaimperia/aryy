@@ -43,8 +43,8 @@ class MyApp extends StatelessWidget {
           "olvidaste_contraseña": (_) => OlvidasteContrasenaWidget(),
           "registrarse_iniciosesion": (_) => MenuFrame(),
         },
-        //home: SplashScreen(),
-        home: MenuFrame());
+        home: SplashScreen());
+    //home: MenuFrame());
   }
 
   static of(BuildContext context) {}
