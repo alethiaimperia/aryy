@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         "iniciarsesion": (_) => IniciarsesionWidget(),
         "Registrarse": (_) => RegistrarseWidget(),
         "registrarse_formulario": (_) => RegistrarseFormularioWidget(),
-        "home_inicio": (_) => Home2Widget(),
+        "home2_inicio": (_) => Home2Widget(),
         "sesion_huella_dactilar": (_) => SesionHuellaDactilarWidget(),
         "barra_perfil": (_) => BarraLateralPerfilWidget(),
         "barra_ayuda": (_) => BarraLateralAyudaWidget(),

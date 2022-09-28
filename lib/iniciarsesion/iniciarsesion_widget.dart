@@ -301,8 +301,8 @@ class _IniciarsesionWidgetState extends State<IniciarsesionWidget> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       InkWell(
-                        onTap: () async {
-                          context.pushNamed('olvidaste_contrasena');
+                        onTap: () {
+                          Navigator.pushNamed(context, "olvidaste_contraseña");
                         },
                         child: Text(
                           '¿Olvidaste tu contraseña?',
@@ -324,8 +324,8 @@ class _IniciarsesionWidgetState extends State<IniciarsesionWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FFButtonWidget(
-                        onPressed: () async {
-                          context.pushNamed('Home2');
+                        onPressed: () {
+                          Navigator.pushNamed(context, "home2_inicio");
                         },
                         text: 'Iniciar sesión',
                         options: FFButtonOptions(
