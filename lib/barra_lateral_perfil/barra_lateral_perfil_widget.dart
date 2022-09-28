@@ -91,7 +91,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
               child: Text(
                 'Perfil',
                 style: FlutterFlowTheme.of(context).bodyText1.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Montserrat',
                       color: Color(0xFF4F565F),
                       fontSize: 20,
                     ),
@@ -121,7 +121,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                         unselectedLabelColor: Color(0xFF4F565F),
                         labelStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Poppins',
+                                  fontFamily: 'Montserrat',
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -138,6 +138,10 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                           ),
                         ],
                       ),
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------ TAB INFORMACIÓN BASICA -----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                       Expanded(
                         child: TabBarView(
                           children: [
@@ -206,7 +210,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                             context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           fontSize: 12,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -287,7 +292,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                 .bodyText2
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Montserrat',
                                                                   fontSize: 12,
                                                                   fontWeight:
                                                                       FontWeight
@@ -375,7 +380,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                           .bodyText2
                                                           .override(
                                                             fontFamily:
-                                                                'Poppins',
+                                                                'Montserrat',
                                                             fontSize: 16,
                                                             fontWeight:
                                                                 FontWeight.w300,
@@ -445,7 +450,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                   .bodyText2
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Poppins',
+                                                                        'Montserrat',
                                                                     fontSize:
                                                                         12,
                                                                     fontWeight:
@@ -535,7 +540,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                 .bodyText2
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Montserrat',
                                                                   fontSize: 16,
                                                                   fontWeight:
                                                                       FontWeight
@@ -607,7 +612,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                   .bodyText2
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Poppins',
+                                                                        'Montserrat',
                                                                     fontSize:
                                                                         12,
                                                                     fontWeight:
@@ -697,7 +702,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                 .bodyText2
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Montserrat',
                                                                   fontSize: 16,
                                                                   fontWeight:
                                                                       FontWeight
@@ -758,7 +763,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                               .bodyText2
                                                               .override(
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Montserrat',
                                                                 color: Color(
                                                                     0xFF4F565F),
                                                                 fontSize: 12,
@@ -804,7 +809,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                               .bodyText1
                                                               .override(
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Montserrat',
                                                                 color: Color(
                                                                     0xFF4F565F),
                                                                 fontSize: 12,
@@ -879,7 +884,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                       .bodyText2
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Poppins',
+                                                                            'Montserrat',
                                                                         fontSize:
                                                                             12,
                                                                         fontWeight:
@@ -967,7 +972,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                 .bodyText1
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Montserrat',
                                                                   color: Color(
                                                                       0xFF4F565F),
                                                                   fontSize: 16,
@@ -1009,7 +1014,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                       context)
                                                   .bodyText1
                                                   .override(
-                                                    fontFamily: 'Poppins',
+                                                    fontFamily: 'Montserrat',
                                                     color: Color(0xFF4F565F),
                                                     fontSize: 12,
                                                     fontWeight: FontWeight.w300,
@@ -1035,17 +1040,16 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                     () => dropDownValue4 = val),
                                                 width: 300,
                                                 height: 40,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color:
-                                                              Color(0xFF4F565F),
-                                                          fontSize: 12,
-                                                          fontWeight:
-                                                              FontWeight.w300,
-                                                        ),
+                                                textStyle: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyText1
+                                                    .override(
+                                                      fontFamily: 'Montserrat',
+                                                      color: Color(0xFF4F565F),
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                    ),
                                                 hintText: 'Estado',
                                                 fillColor: Colors.white,
                                                 elevation: 2,
@@ -1068,17 +1072,16 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                     () => dropDownValue5 = val),
                                                 width: 300,
                                                 height: 40,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color:
-                                                              Color(0xFF4F565F),
-                                                          fontSize: 12,
-                                                          fontWeight:
-                                                              FontWeight.w300,
-                                                        ),
+                                                textStyle: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyText1
+                                                    .override(
+                                                      fontFamily: 'Montserrat',
+                                                      color: Color(0xFF4F565F),
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                    ),
                                                 hintText: 'Ciudad o municipio',
                                                 fillColor: Colors.white,
                                                 elevation: 2,
@@ -1118,16 +1121,18 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                           dropDownValue6 = val),
                                                   width: 80,
                                                   height: 40,
-                                                  textStyle: FlutterFlowTheme
-                                                          .of(context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Poppins',
-                                                        color: Colors.black,
-                                                        fontSize: 14,
-                                                        fontWeight:
-                                                            FontWeight.w300,
-                                                      ),
+                                                  textStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyText1
+                                                          .override(
+                                                            fontFamily:
+                                                                'Montserrat',
+                                                            color: Colors.black,
+                                                            fontSize: 14,
+                                                            fontWeight:
+                                                                FontWeight.w300,
+                                                          ),
                                                   hintText: '+52',
                                                   fillColor: Colors.white,
                                                   elevation: 2,
@@ -1193,7 +1198,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                     .bodyText2
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Poppins',
+                                                                          'Montserrat',
                                                                       fontSize:
                                                                           12,
                                                                       fontWeight:
@@ -1282,7 +1287,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                               .bodyText1
                                                               .override(
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Montserrat',
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1316,7 +1321,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                             .of(context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           color: Colors.black,
                                                           fontSize: 14,
                                                           fontWeight:
@@ -1392,7 +1398,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                       .bodyText2
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Poppins',
+                                                                            'Montserrat',
                                                                         fontSize:
                                                                             12,
                                                                         fontWeight:
@@ -1480,7 +1486,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                 .bodyText1
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Montserrat',
                                                                   fontSize: 16,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1497,6 +1503,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                 ],
                                               ),
                                             ),
+
+//---------------------------------------- BOTON --------------------------------------------------------------------------------
                                             Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0, 20, 0, 20),
@@ -1555,7 +1563,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                 .bodyText2
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Montserrat',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .primaryBtnText,
@@ -1585,6 +1593,10 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                 ],
                               ),
                             ),
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------- TAB UBICACION ---------------------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                             SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -1620,7 +1632,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                             context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           color:
                                                               Color(0xFF7900FF),
                                                         ),
@@ -1640,7 +1653,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                             context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           fontSize: 12,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1675,7 +1689,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily:
+                                                            'Montserrat',
                                                         color: Colors.black,
                                                         fontSize: 12,
                                                         fontWeight:
@@ -1744,7 +1759,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                 .bodyText2
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Montserrat',
                                                                   fontSize: 12,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1833,7 +1848,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                               .bodyText1
                                                               .override(
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Montserrat',
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1853,18 +1868,19 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                     () => dropDownValue9 = val),
                                                 width: 300,
                                                 height: 40,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                textStyle: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyText1
+                                                    .override(
+                                                      fontFamily: 'Montserrat',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .primaryText,
-                                                          fontSize: 12,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                    ),
                                                 hintText: 'Aseguradora',
                                                 fillColor: Colors.white,
                                                 elevation: 2,
@@ -1928,7 +1944,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                 .bodyText2
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Montserrat',
                                                                   fontSize: 12,
                                                                   fontWeight:
                                                                       FontWeight
@@ -2017,7 +2033,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                               .bodyText1
                                                               .override(
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Montserrat',
                                                                 fontSize: 12,
                                                                 fontWeight:
                                                                     FontWeight
@@ -2040,13 +2056,15 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                   width: 100,
                                                   height: 35,
                                                   color: Color(0xFF7900FF),
-                                                  textStyle: FlutterFlowTheme
-                                                          .of(context)
-                                                      .subtitle2
-                                                      .override(
-                                                        fontFamily: 'Poppins',
-                                                        color: Colors.white,
-                                                      ),
+                                                  textStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .subtitle2
+                                                          .override(
+                                                            fontFamily:
+                                                                'Montserrat',
+                                                            color: Colors.white,
+                                                          ),
                                                   borderSide: BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1,
@@ -2064,6 +2082,10 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                 ],
                               ),
                             ),
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------- TAB UBICACION -----------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                             SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -2097,7 +2119,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                             context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           color:
                                                               Color(0xFF7900FF),
                                                         ),
@@ -2117,7 +2140,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                             context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           fontSize: 12,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -2168,7 +2192,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                           context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily:
+                                                            'Montserrat',
                                                         fontSize: 14,
                                                       ),
                                                 ),
@@ -2179,7 +2204,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           fontSize: 12,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -2240,7 +2266,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                           context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily:
+                                                            'Montserrat',
                                                         fontSize: 12,
                                                         fontWeight:
                                                             FontWeight.w300,
