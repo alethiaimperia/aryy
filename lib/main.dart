@@ -1,4 +1,5 @@
 import 'package:aryy_version8/splash_screen.dart';
+import 'package:aryy_version8/vista_video/registrase_iniciarsesion.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -16,32 +17,34 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Prueba',
-      initialRoute: "splash",
-      routes: {
-        "splash": (_) => SplashScreen(),
-        "bienvenida": (_) => HomePageWidget(),
-        "iniciarsesion": (_) => IniciarsesionWidget(),
-        "Registrarse": (_) => RegistrarseWidget(),
-        "registrarse_formulario": (_) => RegistrarseFormularioWidget(),
-        "home2_inicio": (_) => Home2Widget(),
-        "sesion_huella_dactilar": (_) => SesionHuellaDactilarWidget(),
-        "barra_perfil": (_) => BarraLateralPerfilWidget(),
-        "barra_ayuda": (_) => BarraLateralAyudaWidget(),
-        "barra_configuraciones": (_) => BarraLateralConfiguracionesWidget(),
-        "barra_favoritos": (_) => BarraLateralFavoritosWidget(),
-        "barra_metodos": (_) => BarraLateralMetodopagoWidget(),
-        "barra_privacidad": (_) => BarraLateralPrivacidadWidget(),
-        "barra_promociones": (_) => BarraLateralPromocionesWidget(),
-        "barra_recompensas": (_) => BarraLateralRecompensasWidget(),
-        "barra_ubicaciones": (_) => BarraLateralUbicacionesWidget(),
-        "configurar_pin_datos": (_) => ConfigurarPinDatosbiometricosWidget(),
-        "nueva_ubicacion": (_) => NuevaUbicacionWidget(),
-        "olvidaste_contraseña": (_) => OlvidasteContrasenaWidget(),
-      },
-      home: SplashScreen(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Prueba',
+        //initialRoute: "splash",
+        initialRoute: "registrarse_iniciosesion",
+        routes: {
+          "splash": (_) => SplashScreen(),
+          "bienvenida": (_) => HomePageWidget(),
+          "iniciarsesion": (_) => IniciarsesionWidget(),
+          "Registrarse": (_) => RegistrarseWidget(),
+          "registrarse_formulario": (_) => RegistrarseFormularioWidget(),
+          "home2_inicio": (_) => Home2Widget(),
+          "sesion_huella_dactilar": (_) => SesionHuellaDactilarWidget(),
+          "barra_perfil": (_) => BarraLateralPerfilWidget(),
+          "barra_ayuda": (_) => BarraLateralAyudaWidget(),
+          "barra_configuraciones": (_) => BarraLateralConfiguracionesWidget(),
+          "barra_favoritos": (_) => BarraLateralFavoritosWidget(),
+          "barra_metodos": (_) => BarraLateralMetodopagoWidget(),
+          "barra_privacidad": (_) => BarraLateralPrivacidadWidget(),
+          "barra_promociones": (_) => BarraLateralPromocionesWidget(),
+          "barra_recompensas": (_) => BarraLateralRecompensasWidget(),
+          "barra_ubicaciones": (_) => BarraLateralUbicacionesWidget(),
+          "configurar_pin_datos": (_) => ConfigurarPinDatosbiometricosWidget(),
+          "nueva_ubicacion": (_) => NuevaUbicacionWidget(),
+          "olvidaste_contraseña": (_) => OlvidasteContrasenaWidget(),
+          "registrarse_iniciosesion": (_) => MenuFrame(),
+        },
+        //home: SplashScreen(),
+        home: MenuFrame());
   }
 
   static of(BuildContext context) {}
