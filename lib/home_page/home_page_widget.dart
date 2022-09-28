@@ -27,7 +27,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         automaticallyImplyLeading: true,
         actions: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(0, 4, 10, 0),
             child: InkWell(
               onTap: () {
                 Navigator.pushNamed(context, "Registrarse");
