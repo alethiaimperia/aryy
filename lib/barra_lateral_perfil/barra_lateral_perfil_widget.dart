@@ -2225,7 +2225,9 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                         if (Navigator.of(context).canPop()) {
                                           context.pop();
                                         }
-                                        context.pushNamed(
+                                        Navigator.pushNamed(
+                                            context, "nueva_ubicacion");
+                                        /*context.pushNamed(
                                           'nueva_ubicacion',
                                           extra: <String, dynamic>{
                                             kTransitionInfoKey: TransitionInfo(
@@ -2236,7 +2238,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                   Duration(milliseconds: 5),
                                             ),
                                           },
-                                        );
+                                        );*/
                                       },
                                       child: Container(
                                         width: 300,

@@ -29,6 +29,9 @@ class MyApp extends StatelessWidget {
           "registrarse_formulario": (_) => RegistrarseFormularioWidget(),
           "home2_inicio": (_) => Home2Widget(),
           "sesion_huella_dactilar": (_) => SesionHuellaDactilarWidget(),
+          "codigo_verificacion": (context) => CodigoVerificacionWidget(),
+
+          //OPCIONES DE BARRA LATERAL
           "barra_perfil": (_) => BarraLateralPerfilWidget(),
           "barra_ayuda": (_) => BarraLateralAyudaWidget(),
           "barra_configuraciones": (_) => BarraLateralConfiguracionesWidget(),
