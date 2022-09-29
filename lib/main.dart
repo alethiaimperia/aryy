@@ -41,7 +41,8 @@ class MyApp extends StatelessWidget {
           "configurar_pin_datos": (_) => ConfigurarPinDatosbiometricosWidget(),
           "nueva_ubicacion": (_) => NuevaUbicacionWidget(),
           "olvidaste_contraseña": (_) => OlvidasteContrasenaWidget(),
-          "registrarse_iniciosesion": (_) => MenuFrame(),
+          "registrarse_iniciosesion": (_) =>
+              MenuFrame(), //VISTA CON VIDEO DE FONDO
         },
         home: SplashScreen());
     //home: MenuFrame());

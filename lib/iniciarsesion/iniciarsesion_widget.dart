@@ -56,7 +56,7 @@ class _IniciarsesionWidgetState extends State<IniciarsesionWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
                 child: InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, "Registrarse");
+                    Navigator.pushNamed(context, "registrarse_iniciosesion");
                   },
                   child: Text(
                     'Registrarme',
