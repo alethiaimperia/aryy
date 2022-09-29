@@ -134,7 +134,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'Home2',
               path: 'home2',
               builder: (context, params) => Home2Widget(),
-            )
+            ),
+            FFRoute(
+                name: 'Buscador',
+                path: 'buscador',
+                builder: (context, params) => BuscadorPrincipal())
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
       ],

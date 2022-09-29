@@ -1,18 +1,17 @@
-import '../models/buscador_respuestaApi/RespuestaApi.dart';
 import '../backend/api_requests/api_calls.dart';
+import '../models/buscador/buscador_respuestaApi/RespuestaApi.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
+class BuscadorPrincipal extends StatefulWidget {
+  const BuscadorPrincipal({Key? key}) : super(key: key);
 
   @override
-  _HomePageWidgetState createState() => _HomePageWidgetState();
+  _BuscadorPrincipalState createState() => _BuscadorPrincipalState();
 }
 
 // Factory this class later
@@ -23,7 +22,7 @@ class Sugerencias {
   Sugerencias(this.nombre, this.icono, this.colorFondo);
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _BuscadorPrincipalState extends State<BuscadorPrincipal> {
   ApiCallResponse? apiResult;
   final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController? busquedaInputController;
@@ -36,24 +35,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     ubicacionInputController = TextEditingController();
   }
 
-  void LlamaAPIBuscador(TextEditingController? textEditingController) async {
-    var _shouldSetState = false;
-    apiResult = await GetBarraBusquedaCall.call(
-      search: textEditingController!.text,
-      mod: 'searchmed',
-    );
-    _shouldSetState = true;
-    if ((apiResult?.succeeded ?? true)) {
-      final resultSearch =
-          getJsonField(apiResult?.jsonBody, r'''$[*]''').toList();
-      dataList = resultSearch[1];
-//    Convert api response into proper response class
-//    respuestaApi = respuestaApiFromJson(getJsonField(apiResult?.jsonBody,r'''$[*]''').toString());
-    }
-    if (_shouldSetState) setState(() {});
-    return;
-  }
-
   @override
   void dispose() {
     busquedaInputController?.dispose();
@@ -61,20 +42,37 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     super.dispose();
   }
 
-  // Upon the api call result, style the listView
-  late List<Sugerencias> sugerencias = <Sugerencias>[
-    new Sugerencias(
-        "Especialista", Icons.medical_services_outlined, Color(0xFF7900FF)),
-    new Sugerencias("Medicamento", FontAwesomeIcons.pills, Color(0xFF4700FF)),
-    new Sugerencias("Síntoma", Icons.saved_search, Color(0xFFB380FF)),
-    new Sugerencias("Prueba de triglicéridos", FontAwesomeIcons.microscope,
-        Color(0xFF5101CC))
-  ];
-  // Icons.medical_services_outlined
+// Icons.medical_services_outlined
   int _selectedIndex = 0;
   List<dynamic> dataList = [];
   // Handle Respuesta de la api
   late RespuestaApi respuestaApi;
+  // Upon the api call result, style the listView
+  late List<Sugerencias> sugerencias = <Sugerencias>[
+    Sugerencias("Especialista", Icons.medical_services_outlined,
+        const Color(0xFF7900FF)),
+    Sugerencias("Medicamento", FontAwesomeIcons.pills, const Color(0xFF4700FF)),
+    Sugerencias("Síntoma", Icons.saved_search, const Color(0xFFB380FF)),
+    Sugerencias("Prueba de triglicéridos", FontAwesomeIcons.microscope,
+        const Color(0xFF5101CC))
+  ];
+  void LlamaAPIBuscador(TextEditingController? textEditingController) async {
+    var shouldSetState = false;
+    apiResult = await GetBarraBusquedaCall.call(
+      search: textEditingController!.text,
+      mod: 'searchmed',
+    );
+    shouldSetState = true;
+    if ((apiResult?.succeeded ?? true)) {
+      final resultSearch =
+          getJsonField(apiResult?.jsonBody, r'''$[*]''').toList();
+      dataList = resultSearch[1];
+//    Convert api response into proper response class
+//    respuestaApi = respuestaApiFromJson(getJsonField(apiResult?.jsonBody,r'''$[*]''').toString());
+    }
+    if (shouldSetState) setState(() {});
+    return;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +82,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
         leading: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+          padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
           child: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30,
@@ -119,13 +117,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40, 10, 40, 10),
                                 child: Container(
                                   width: 100,
