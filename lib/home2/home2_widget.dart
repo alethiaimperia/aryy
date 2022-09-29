@@ -176,7 +176,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                 children: [
                   InkWell(
                     onTap: () async {
-                      context.pushNamed('Barra_lateral_perfil');
+                      context.pushNamed('barra_perfil');
                     },
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
@@ -208,7 +208,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: InkWell(
                       onTap: () async {
-                        context.pushNamed('Barra_lateral_favoritos');
+                        context.pushNamed('barra_favoritos');
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -243,7 +243,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: InkWell(
                       onTap: () async {
-                        context.pushNamed('Barra_lateral_recompensas');
+                        context.pushNamed('barra_recompensas');
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -278,7 +278,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: InkWell(
                       onTap: () async {
-                        context.pushNamed('Barra_lateral_promociones');
+                        context.pushNamed('barra_promociones');
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -313,7 +313,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: InkWell(
                       onTap: () async {
-                        context.pushNamed('Barra_lateral_metodopago');
+                        context.pushNamed('barra_metodos_pago');
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -348,7 +348,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: InkWell(
                       onTap: () async {
-                        context.pushNamed('Barra_lateral_ubicaciones');
+                        context.pushNamed('barra_ubicaciones');
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -383,7 +383,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: InkWell(
                       onTap: () async {
-                        context.pushNamed('Barra_lateral_ayuda');
+                        context.pushNamed('barra_ayuda');
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -418,7 +418,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: InkWell(
                       onTap: () async {
-                        context.pushNamed('Barra_lateral_privacidad');
+                        context.pushNamed('barra_privacidad');
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -453,7 +453,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: InkWell(
                       onTap: () async {
-                        context.pushNamed('Barra_lateral_configuraciones');
+                        context.pushNamed('barra_configuraciones');
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.max,

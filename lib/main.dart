@@ -19,8 +19,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Prueba',
-        //initialRoute: "splash",
-        initialRoute: "registrarse_iniciosesion",
+        initialRoute: "splash",
+        //initialRoute: "registrarse_iniciosesion",
         routes: {
           "splash": (_) => SplashScreen(),
           "bienvenida": (_) => HomePageWidget(),
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           "barra_ayuda": (_) => BarraLateralAyudaWidget(),
           "barra_configuraciones": (_) => BarraLateralConfiguracionesWidget(),
           "barra_favoritos": (_) => BarraLateralFavoritosWidget(),
-          "barra_metodos": (_) => BarraLateralMetodopagoWidget(),
+          "barra_metodos_pago": (_) => BarraLateralMetodopagoWidget(),
           "barra_privacidad": (_) => BarraLateralPrivacidadWidget(),
           "barra_promociones": (_) => BarraLateralPromocionesWidget(),
           "barra_recompensas": (_) => BarraLateralRecompensasWidget(),

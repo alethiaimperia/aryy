@@ -56,7 +56,7 @@ class MenuFrame extends StatelessWidget {
                       children: [
                         FFButtonWidget(
                           onPressed: () {
-                            Navigator.pushNamed(context, "home2_inicio");
+                            Navigator.pushNamed(context, "iniciarsesion");
                           },
                           text: 'Iniciar sesión',
                           options: FFButtonOptions(
