@@ -626,14 +626,20 @@ class _Home2WidgetState extends State<Home2Widget> {
                                       size: 18,
                                     ),
                                   ),
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------- Buscador_especialista -------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                   Expanded(
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           5, 0, 0, 0),
                                       child: TextFormField(
                                         controller: textController,
-                                        onFieldSubmitted: (_) async {
-                                          context.pushNamed('buscar_medico');
+                                        onChanged: (_) async {
+                                          Navigator.of(context).pushNamed(
+                                              'buscar_especialista',
+                                              arguments: {'emotion': 'Happy'});
                                         },
                                         autofocus: true,
                                         obscureText: false,
