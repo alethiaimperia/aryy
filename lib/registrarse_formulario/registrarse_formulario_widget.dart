@@ -893,7 +893,9 @@ class _RegistrarseFormularioWidgetState
                                             ) ??
                                             false;
 
-                                    context.pushNamed('codigo_verificacion');
+                                    //context.pushNamed('codigo_verificacion');
+                                    Navigator.pushNamed(
+                                        context, "codigo_verificacion");
                                   },
                                   text: 'Guardar y verificar',
                                   options: FFButtonOptions(

@@ -12,7 +12,8 @@ class _VideoWidgetState extends State<VideoWidget> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('assets/video/video.mp4')
+    //_controller = VideoPlayerController.asset('assets/video/video.mp4')
+    _controller = VideoPlayerController.asset('assets/video/aryy-video.mp4')
       ..initialize().then((_) {
         _controller.setVolume(0.0);
         _controller.setLooping(true);
@@ -29,6 +30,7 @@ class _VideoWidgetState extends State<VideoWidget> {
           ? LayoutBuilder(
               builder: (context, constraints) {
                 return SizedBox.expand(
+                  //expand
                   child: FittedBox(
                     fit: BoxFit.cover,
                     child: SizedBox(

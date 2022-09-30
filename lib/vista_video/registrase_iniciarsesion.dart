@@ -35,7 +35,7 @@ class MenuFrame extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(22, 200, 22, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(22, 500, 22, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -49,14 +49,14 @@ class MenuFrame extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(22, 20, 22, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(22, 70, 22, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         FFButtonWidget(
                           onPressed: () {
-                            Navigator.pushNamed(context, "home2_inicio");
+                            Navigator.pushNamed(context, "iniciarsesion");
                           },
                           text: 'Iniciar sesión',
                           options: FFButtonOptions(
@@ -93,11 +93,13 @@ class MenuFrame extends StatelessWidget {
                           options: FFButtonOptions(
                             width: 300,
                             height: 40,
-                            color: Color(0xFF7900FF),
+                            //color: Color(0xFF7900FF),
+                            color: Colors.white,
                             textStyle:
                                 FlutterFlowTheme.of(context).subtitle2.override(
                                       fontFamily: 'Montserrat',
-                                      color: Colors.white,
+                                      //color: Colors.white,
+                                      color: Color(0xFF7900FF),
                                       fontWeight: FontWeight.w500,
                                     ),
                             borderSide: BorderSide(

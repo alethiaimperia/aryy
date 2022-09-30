@@ -92,7 +92,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 0, 0, 20),
                                             child: Image.asset(
-                                              LAUNCH_ESPECIALISTAS,
+                                              LAUNCH_ESPECIALISTAS, //IMAGEN
                                               width: 350,
                                               height: 300,
                                               fit: BoxFit.fitWidth,
@@ -208,7 +208,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 30, 0, 30),
                                             child: Image.asset(
-                                              LAUNCH_LABORATORIOS,
+                                              LAUNCH_LABORATORIOS, //IMAGEN
                                               width: 300,
                                               height: 250,
                                               fit: BoxFit.fitWidth,
@@ -264,7 +264,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 30, 0, 30),
                                             child: Image.asset(
-                                              LAUNCH_MEDICINA,
+                                              LAUNCH_MEDICINA, //IMAGEN
                                               width: 300,
                                               height: 250,
                                               fit: BoxFit.fitWidth,

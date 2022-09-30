@@ -46,17 +46,22 @@ class _IniciarsesionWidgetState extends State<IniciarsesionWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SvgPicture.asset(
-                REGRESAR,
-                width: 30,
-                height: 30,
-                fit: BoxFit.cover,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "registrarse_iniciosesion");
+                },
+                child: SvgPicture.asset(
+                  REGRESAR,
+                  width: 30,
+                  height: 30,
+                  fit: BoxFit.cover,
+                ),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
                 child: InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, "registrarse_iniciosesion");
+                    Navigator.pushNamed(context, "Registrarse");
                   },
                   child: Text(
                     'Registrarme',

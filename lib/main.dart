@@ -19,8 +19,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Prueba',
-        //initialRoute: "splash",
-        initialRoute: "registrarse_iniciosesion",
+        initialRoute: "splash",
+        //initialRoute: "registrarse_iniciosesion",
         routes: {
           "splash": (_) => SplashScreen(),
           "bienvenida": (_) => HomePageWidget(),
@@ -30,6 +30,9 @@ class MyApp extends StatelessWidget {
           "home2_inicio": (_) => Home2Widget(),
           "buscar_especialista": (_) => BuscarEspecialistaWidget(),
           "sesion_huella_dactilar": (_) => SesionHuellaDactilarWidget(),
+          "codigo_verificacion": (_) => CodigoVerificacionWidget(),
+
+          //OPCIONES DE BARRA LATERAL
           "barra_perfil": (_) => BarraLateralPerfilWidget(),
           "barra_ayuda": (_) => BarraLateralAyudaWidget(),
           "barra_configuraciones": (_) => BarraLateralConfiguracionesWidget(),

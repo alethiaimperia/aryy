@@ -1,3 +1,5 @@
+import 'package:aryy_version8/styles/my_icons.dart';
+
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -30,11 +32,11 @@ class _ConfigurarPinDatosbiometricosWidgetState
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               InkWell(
-                onTap: () async {
-                  context.pushNamed('codigo_verificacion');
+                onTap: () {
+                  Navigator.pushNamed(context, "codigo_verificacion");
                 },
-                child: SvgPicture.network(
-                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/aryy-version1-2ra5ai/assets/cnxroa6lehu0/UI_MOVIL_REGRESAR.svg',
+                child: SvgPicture.asset(
+                  REGRESAR,
                   width: 30,
                   height: 30,
                   fit: BoxFit.cover,
@@ -43,8 +45,8 @@ class _ConfigurarPinDatosbiometricosWidgetState
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
                 child: InkWell(
-                  onTap: () async {
-                    context.pushNamed('iniciarsesion');
+                  onTap: () {
+                    Navigator.pushNamed(context, "iniciarsesion");
                   },
                   child: Text(
                     'Omitir',
@@ -76,8 +78,8 @@ class _ConfigurarPinDatosbiometricosWidgetState
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.network(
-                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/aryy-version1-2ra5ai/assets/tf0gio9xuw5u/UI_Aryy_LOGOTIPO_SF.svg',
+                    SvgPicture.asset(
+                      ARYY_LOGO_MORADO,
                       width: 180,
                       fit: BoxFit.cover,
                     ),
@@ -186,8 +188,8 @@ class _ConfigurarPinDatosbiometricosWidgetState
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              SvgPicture.network(
-                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/aryy-version1-2ra5ai/assets/3995g37k3prh/ICON_HUELLA-2.svg',
+                              SvgPicture.asset(
+                                HUELLA_MORADO,
                                 width: 40,
                                 height: 40,
                                 fit: BoxFit.cover,
@@ -214,8 +216,13 @@ class _ConfigurarPinDatosbiometricosWidgetState
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              SvgPicture.network(
-                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/aryy-version1-2ra5ai/assets/5m9cpdic4rx7/ICON_FACE.svg',
+                              InkWell(
+                                onTap: () async {
+                                  context.pushNamed('sesion_huella_dactilar');
+                                },
+                              ),
+                              SvgPicture.asset(
+                                FACE,
                                 width: 40,
                                 height: 40,
                                 fit: BoxFit.cover,
