@@ -642,13 +642,18 @@ class _Home2WidgetState extends State<Home2Widget> {
                                         child: TextFormField(
                                           controller: textController,
                                           onChanged: (_) async {
-//                                            Navigator.of(context).pushNamed(
-//                                                'buscar_especialista');
-                                            Navigator.of(context).push(
-                                                animacion_deslizar_arriba(
-                                                    const BuscarEspecialistaWidget()));
+                                            Navigator.push(
+                                                context,
+                                                PageTransition(
+                                                    curve: Curves.decelerate,
+                                                    duration: const Duration(
+                                                        milliseconds: 400),
+                                                    child:
+                                                        const BuscarEspecialistaWidget(),
+                                                    type: PageTransitionType
+                                                        .bottomToTop));
                                           },
-                                          autofocus: true,
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: const InputDecoration(
                                             hintText:

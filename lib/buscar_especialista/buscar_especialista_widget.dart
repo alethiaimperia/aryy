@@ -1,6 +1,6 @@
 import 'package:aryy_version8/models/home2/barra_de_navegacion.dart';
-
 import '../backend/api_requests/api_calls.dart';
+import '../home2/home2_widget.dart';
 import '../models/buscador/buscador_llamarApi/buscador_resultados.dart';
 import '../models/buscador/buscador_respuestaApi/RespuestaApi.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
@@ -38,16 +38,6 @@ class _BuscarEspecialistaWidgetState extends State<BuscarEspecialistaWidget> {
     busquedaInputController?.dispose();
     ubicacionInputController?.dispose();
     super.dispose();
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    // Recibe como parámetro el texto que se escribió en home2_widget
-    if (ModalRoute.of(context)!.settings.arguments != null) {
-      arguments =
-          ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-    }
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -94,7 +84,6 @@ class _BuscarEspecialistaWidgetState extends State<BuscarEspecialistaWidget> {
 // Icons.medical_services_outlined
   int _selectedIndex = 0;
   String keyName = "";
-  late Map<String, dynamic> arguments = Map();
 
   @override
   Widget build(BuildContext context) {
@@ -116,9 +105,13 @@ class _BuscarEspecialistaWidgetState extends State<BuscarEspecialistaWidget> {
                 size: 30,
               ),
               onPressed: () async {
-                Navigator.of(context).pushNamed("home2_inicio");
-//              Navigator.pushNamed(context, "buscar_especialista");
-//                    transitionType: PageTransitionType.bottomToTop,
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        curve: Curves.decelerate,
+                        duration: const Duration(milliseconds: 400),
+                        child: const Home2Widget(),
+                        type: PageTransitionType.topToBottom));
               },
             ),
           ),
