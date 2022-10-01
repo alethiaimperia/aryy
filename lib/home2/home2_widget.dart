@@ -642,16 +642,8 @@ class _Home2WidgetState extends State<Home2Widget> {
                                         child: TextFormField(
                                           controller: textController,
                                           onChanged: (_) async {
-                                            Navigator.push(
-                                                context,
-                                                PageTransition(
-                                                    curve: Curves.decelerate,
-                                                    duration: const Duration(
-                                                        milliseconds: 400),
-                                                    child:
-                                                        const BuscarEspecialistaWidget(),
-                                                    type: PageTransitionType
-                                                        .bottomToTop));
+                                            animacion_hacia_arriba(context,
+                                                const BuscarEspecialistaWidget());
                                           },
                                           autofocus: false,
                                           obscureText: false,
@@ -1096,6 +1088,6 @@ class _Home2WidgetState extends State<Home2Widget> {
 //------------------------------------- BARRA DE NAVEGACION -------------------------------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        bottomNavigationBar: GetBarradeNavegacion());
+        bottomNavigationBar: GetBarradeNavegacion(context));
   }
 }

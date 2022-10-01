@@ -482,6 +482,6 @@ class _BuscarEspecialistaWidgetState extends State<BuscarEspecialistaWidget> {
             ),
           ),
         ),
-        bottomNavigationBar: GetBarradeNavegacion());
+        bottomNavigationBar: GetBarradeNavegacion(context));
   }
 }

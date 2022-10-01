@@ -1,6 +1,21 @@
 import 'package:flutter/widgets.dart';
+import '../../buscar_especialista/buscar_especialista_widget.dart';
+import '../../flutter_flow/flutter_flow_util.dart';
 
 // Las animaciones de navegación entre vistas se guardarán aqui.
+
+void animacion_hacia_arriba(
+    BuildContext context, StatefulWidget siguienteWidget) {
+  Navigator.push(
+      context,
+      PageTransition(
+          curve: Curves.decelerate,
+          duration: const Duration(milliseconds: 400),
+          child: siguienteWidget,
+          type: PageTransitionType.bottomToTop));
+}
+
+// Animaciones mas detalladas
 
 //
 Route animacion_deslizar_arriba(StatefulWidget siguienteVistaWidget) {
