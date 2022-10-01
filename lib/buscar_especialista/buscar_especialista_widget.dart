@@ -1,6 +1,7 @@
-import 'package:aryy_version8/models/home2/barra_de_navegacion.dart';
+import 'package:aryy_version8/barra_inferior_navegacion/barra_navegacion.dart';
 import '../backend/api_requests/api_calls.dart';
 import '../home2/home2_widget.dart';
+import '../models/animations/animaciones_entre_vistas.dart';
 import '../models/buscador/buscador_llamarApi/buscador_resultados.dart';
 import '../models/buscador/buscador_respuestaApi/RespuestaApi.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
@@ -105,13 +106,7 @@ class _BuscarEspecialistaWidgetState extends State<BuscarEspecialistaWidget> {
                 size: 30,
               ),
               onPressed: () async {
-                Navigator.push(
-                    context,
-                    PageTransition(
-                        curve: Curves.decelerate,
-                        duration: const Duration(milliseconds: 400),
-                        child: const Home2Widget(),
-                        type: PageTransitionType.topToBottom));
+                animacion_deslizar_arriba(const Home2Widget());
               },
             ),
           ),

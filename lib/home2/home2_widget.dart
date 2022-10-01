@@ -1,16 +1,12 @@
 import 'package:aryy_version8/buscar_especialista/buscar_especialista_widget.dart';
-import 'package:aryy_version8/models/animations/deslizar_arriba.dart';
+import 'package:aryy_version8/models/animations/animaciones_entre_vistas.dart';
 import 'package:aryy_version8/styles/my_icons.dart';
-
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-
-import '../models/home2/barra_de_navegacion.dart';
+import '../barra_inferior_navegacion/barra_navegacion.dart';
 
 class Home2Widget extends StatefulWidget {
   const Home2Widget({Key? key}) : super(key: key);
@@ -64,7 +60,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                 child: Container(
                   width: 80,
                   height: 20,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFF7900FF),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(25),

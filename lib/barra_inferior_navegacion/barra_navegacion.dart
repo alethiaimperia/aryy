@@ -2,9 +2,6 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import '../../buscar_especialista/buscar_especialista_widget.dart';
-import '../animations/deslizar_arriba.dart';
-
 class BotonBarraNavegacion {
   IconData iconData;
   BotonBarraNavegacion(this.iconData);
@@ -18,7 +15,7 @@ late List<BotonBarraNavegacion> barradeNavegacion = <BotonBarraNavegacion>[
   BotonBarraNavegacion(Icons.person)
 ];
 
-late int deltaIndex = 0, currentIndex;
+late int deltaIndex = 0, currentIndex = -1;
 
 CurvedNavigationBar GetBarradeNavegacion(BuildContext context) {
   return CurvedNavigationBar(
@@ -31,13 +28,15 @@ CurvedNavigationBar GetBarradeNavegacion(BuildContext context) {
       animationCurve: Curves.bounceInOut,
       onTap: (index) {
         debugPrint("current Index is $index");
-        if (currentIndex != deltaIndex) {
-          switch (index) {
-            case 2:
-              animacion_hacia_arriba(context, const BuscarEspecialistaWidget());
-              break;
-          }
-        }
+        // Por ahora se hace la navegacion directo en barra_inferior_navegacion_widget.
+        // Previene ir a la pagina destino si ya estamos en ella
+        // if (currentIndex != deltaIndex) {
+        //   switch (index) {
+        //     case 2:
+        //       animacion_hacia_arriba(context, const BuscarEspecialistaWidget());
+        //       break;
+        //   }
+        // }
         deltaIndex = index;
       },
       items: barradeNavegacion

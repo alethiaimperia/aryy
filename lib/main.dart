@@ -1,12 +1,6 @@
 import 'package:aryy_version8/splash_screen.dart';
 import 'package:aryy_version8/vista_video/registrase_iniciarsesion.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'flutter_flow/flutter_flow_theme.dart';
-import 'flutter_flow/flutter_flow_util.dart';
-import 'flutter_flow/internationalization.dart';
-import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
 void main() => runApp(MyApp());
@@ -23,28 +17,30 @@ class MyApp extends StatelessWidget {
         //initialRoute: "registrarse_iniciosesion",
         routes: {
           "splash": (_) => SplashScreen(),
-          "bienvenida": (_) => HomePageWidget(),
-          "iniciarsesion": (_) => IniciarsesionWidget(),
-          "Registrarse": (_) => RegistrarseWidget(),
-          "registrarse_formulario": (_) => RegistrarseFormularioWidget(),
-          "home2_inicio": (_) => Home2Widget(),
-          "buscar_especialista": (_) => BuscarEspecialistaWidget(),
-          "sesion_huella_dactilar": (_) => SesionHuellaDactilarWidget(),
-          "codigo_verificacion": (_) => CodigoVerificacionWidget(),
-
+          "bienvenida": (_) => const HomePageWidget(),
+          "iniciarsesion": (_) => const IniciarsesionWidget(),
+          "Registrarse": (_) => const RegistrarseWidget(),
+          "registrarse_formulario": (_) => const RegistrarseFormularioWidget(),
+//          "home2_inicio": (_) => const Home2Widget(),
+          "home2_inicio": (_) => const BarraInferiorNavegacion(),
+          "buscar_especialista": (_) => const BuscarEspecialistaWidget(),
+          "sesion_huella_dactilar": (_) => const SesionHuellaDactilarWidget(),
+          "codigo_verificacion": (_) => const CodigoVerificacionWidget(),
           //OPCIONES DE BARRA LATERAL
-          "barra_perfil": (_) => BarraLateralPerfilWidget(),
-          "barra_ayuda": (_) => BarraLateralAyudaWidget(),
-          "barra_configuraciones": (_) => BarraLateralConfiguracionesWidget(),
-          "barra_favoritos": (_) => BarraLateralFavoritosWidget(),
-          "barra_metodos": (_) => BarraLateralMetodopagoWidget(),
-          "barra_privacidad": (_) => BarraLateralPrivacidadWidget(),
-          "barra_promociones": (_) => BarraLateralPromocionesWidget(),
-          "barra_recompensas": (_) => BarraLateralRecompensasWidget(),
-          "barra_ubicaciones": (_) => BarraLateralUbicacionesWidget(),
-          "configurar_pin_datos": (_) => ConfigurarPinDatosbiometricosWidget(),
-          "nueva_ubicacion": (_) => NuevaUbicacionWidget(),
-          "olvidaste_contraseña": (_) => OlvidasteContrasenaWidget(),
+          "barra_perfil": (_) => const BarraLateralPerfilWidget(),
+          "barra_ayuda": (_) => const BarraLateralAyudaWidget(),
+          "barra_configuraciones": (_) =>
+              const BarraLateralConfiguracionesWidget(),
+          "barra_favoritos": (_) => const BarraLateralFavoritosWidget(),
+          "barra_metodos": (_) => const BarraLateralMetodopagoWidget(),
+          "barra_privacidad": (_) => const BarraLateralPrivacidadWidget(),
+          "barra_promociones": (_) => const BarraLateralPromocionesWidget(),
+          "barra_recompensas": (_) => const BarraLateralRecompensasWidget(),
+          "barra_ubicaciones": (_) => const BarraLateralUbicacionesWidget(),
+          "configurar_pin_datos": (_) =>
+              const ConfigurarPinDatosbiometricosWidget(),
+          "nueva_ubicacion": (_) => const NuevaUbicacionWidget(),
+          "olvidaste_contraseña": (_) => const OlvidasteContrasenaWidget(),
           "registrarse_iniciosesion": (_) =>
               MenuFrame(), //VISTA CON VIDEO DE FONDO
         },
