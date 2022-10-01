@@ -1,3 +1,5 @@
+import 'package:aryy_version8/buscar_especialista/buscar_especialista_widget.dart';
+import 'package:aryy_version8/models/animations/deslizar_arriba.dart';
 import 'package:aryy_version8/styles/my_icons.dart';
 
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -620,7 +622,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    Padding(
+                                    const Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           5, 0, 0, 0),
                                       child: Icon(
@@ -635,17 +637,20 @@ class _Home2WidgetState extends State<Home2Widget> {
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            5, 0, 0, 0),
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(5, 0, 0, 0),
                                         child: TextFormField(
                                           controller: textController,
                                           onChanged: (_) async {
-                                            Navigator.of(context).pushNamed(
-                                                'buscar_especialista');
+//                                            Navigator.of(context).pushNamed(
+//                                                'buscar_especialista');
+                                            Navigator.of(context).push(
+                                                animacion_deslizar_arriba(
+                                                    const BuscarEspecialistaWidget()));
                                           },
                                           autofocus: true,
                                           obscureText: false,
-                                          decoration: InputDecoration(
+                                          decoration: const InputDecoration(
                                             hintText:
                                                 'Doctores, medicamentos, estudios y mas...',
                                             enabledBorder: UnderlineInputBorder(
@@ -653,8 +658,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                                                 color: Color(0x00000000),
                                                 width: 1,
                                               ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
+                                              borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(4.0),
                                                 topRight: Radius.circular(4.0),
                                               ),
@@ -664,8 +668,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                                                 color: Color(0x00000000),
                                                 width: 1,
                                               ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
+                                              borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(4.0),
                                                 topRight: Radius.circular(4.0),
                                               ),
@@ -675,8 +678,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                                                 color: Color(0x00000000),
                                                 width: 1,
                                               ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
+                                              borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(4.0),
                                                 topRight: Radius.circular(4.0),
                                               ),
@@ -687,8 +689,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                                                 color: Color(0x00000000),
                                                 width: 1,
                                               ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
+                                              borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(4.0),
                                                 topRight: Radius.circular(4.0),
                                               ),
@@ -742,8 +743,8 @@ class _Home2WidgetState extends State<Home2Widget> {
                                         Color(0xFF7900FF)
                                       ],
                                       stops: [0, 1],
-                                      begin: AlignmentDirectional(0, -1),
-                                      end: AlignmentDirectional(0, 1),
+                                      begin: const AlignmentDirectional(0, -1),
+                                      end: const AlignmentDirectional(0, 1),
                                     ),
                                     borderRadius: BorderRadius.circular(20),
                                   ),
@@ -811,8 +812,8 @@ class _Home2WidgetState extends State<Home2Widget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  10, 0, 0, 0),
                               child: Material(
                                 color: Colors.transparent,
                                 elevation: 4,
@@ -823,7 +824,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                                   width: 150,
                                   height: 90,
                                   decoration: BoxDecoration(
-                                    gradient: LinearGradient(
+                                    gradient: const LinearGradient(
                                       colors: [
                                         Color(0xFFB380FF),
                                         Color(0xFFD0B3FF)
@@ -920,7 +921,8 @@ class _Home2WidgetState extends State<Home2Widget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(90, 0, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(90, 0, 0, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -941,7 +943,8 @@ class _Home2WidgetState extends State<Home2Widget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 30, 20, 0),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(20, 30, 20, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -956,7 +959,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                             width: 330,
                             height: 150,
                             decoration: BoxDecoration(
-                              color: Color(0xFFF4EDFF),
+                              color: const Color(0xFFF4EDFF),
                               borderRadius: BorderRadius.circular(12),
                               shape: BoxShape.rectangle,
                             ),
@@ -1010,8 +1013,9 @@ class _Home2WidgetState extends State<Home2Widget> {
                                       ],
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 5, 0, 0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0, 5, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -1021,7 +1025,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
-                                            children: [
+                                            children: const [
                                               Icon(
                                                 Icons.notifications_none,
                                                 color: Color(0xFF7900FF),
@@ -1030,9 +1034,8 @@ class _Home2WidgetState extends State<Home2Widget> {
                                             ],
                                           ),
                                           Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    5, 0, 0, 0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(5, 0, 0, 0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
