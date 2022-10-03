@@ -52,17 +52,22 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SvgPicture.asset(
-                REGRESAR,
-                width: 30,
-                height: 30,
-                fit: BoxFit.cover,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "registrarse_iniciosesion");
+                },
+                child: SvgPicture.asset(
+                  REGRESAR,
+                  width: 30,
+                  height: 30,
+                  fit: BoxFit.cover,
+                ),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
                 child: InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, "registrarse_iniciosesion");
+                    Navigator.pushNamed(context, "iniciarsesion");
                   },
                   child: Text(
                     'Inicar sesión',
@@ -512,9 +517,9 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                             },
                           );
 
-                          //context.pushNamed('Registrarse_formulario'); //NO ME SIRVE POR EL MOMENTO
-                          Navigator.pushNamed(
-                              context, "registrarse_formulario");
+                          context.pushNamed(
+                              'registrarse_formulario'); //DEFINO LA NAVEGACION DE ESTE MODO POR EL ASYNC
+                          //Navigator.pushNamed(context, "registrarse_formulario"); //NO ME SIRVE POR EL MOMENTO
                         },
                         text: 'Registrarme',
                         options: FFButtonOptions(
@@ -629,6 +634,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                   ),
                 ),
               ],
+              //BOTON
             ),
           ),
         ),

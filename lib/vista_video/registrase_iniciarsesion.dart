@@ -49,7 +49,7 @@ class MenuFrame extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(22, 20, 22, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(22, 70, 22, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
