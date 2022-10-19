@@ -9,6 +9,9 @@ const RECOMPENSAS = 'assets/icons/barra_lateral/ICON_RECOMP.svg';
 const CERRAR_SESION = 'assets/icons/barra_lateral/ICON_SALIR.svg';
 const UBICACIONES = 'assets/icons/barra_lateral/ICON_UBIC.svg';
 const PERFIL = 'assets/icons/barra_lateral/ICON_PERFIL.svg';
+const FILTRO_ESPECIALISTA = 'assets/icons/mi_perfil/FILTRO-ESPECIALISTA.svg';
+const FILTRO_MEDICAMENTOS = 'assets/icons/mi_perfil/FILTRO-MEDICAMENTOs.svg';
+const WP_PERFIL = 'assets/images/perfil/wp_perfil.jpg';
 
 //ICONOS BARRA NAVEGACION
 const AGREGAR = 'assets/icons/barra_navegacion/ICON_AGREGAR.svg';
@@ -24,7 +27,7 @@ const NOTIFICACION = 'assets/icons/home/ICON_NOTIF.svg';
 const RECETAS = 'assets/icons/home/ICON_RECETAS.svg';
 const RECORDATORIO = 'assets/icons/home/ICON_RECORDATORIO.svg';
 
-//INCONOS INICIO DE APLICACION
+//ICONOS INICIO DE APLICACION
 const CORREO = 'assets/icons/inicio_app/ICON_CORREO.svg';
 const FACE = 'assets/icons/inicio_app/ICON_FACE.svg';
 const HUELLA_MORADO = 'assets/icons/inicio_app/ICON_HUELLA-2.svg';
@@ -32,10 +35,10 @@ const HUELLA_BLANCO = 'assets/icons/inicio_app/ICON_HUELLA.svg';
 const LLAVE = 'assets/icons/inicio_app/ICON_LLAVE.svg';
 const MENSAJE = 'assets/icons/inicio_app/ICON_SMS.svg';
 const WHATSAPP = 'assets/icons/inicio_app/ICON_WSP.svg';
-//ICONOS INICIO DE LA APLICACION
 const ARYY_LOGO_MORADO = 'assets/logotipos/aryy_logo_morado.svg';
 const ARYY_LOGO_BLANCO = 'assets/logotipos/aryy_logo_blanco.svg';
 const MECAHSOFT_LOGO = 'assets/logotipos/mecahsoft_logo.svg';
+const AVATAR = 'assets/icons/Avatar.png';
 
 //ICONOS MI PERFIL
 const DIRECCION = 'assets/icons/mi_perfil/ICON_DIRECCON.svg';
@@ -44,6 +47,9 @@ const MI_UBICACION = 'assets/icons/mi_perfil/ICON_MI-UBIC.svg';
 const PERFIL_RELLENO = 'assets/icons/mi_perfil/ICON_PERFIL_MOVIL.svg';
 const PIN = 'assets/icons/mi_perfil/ICON_PIN.svg';
 const UBICACION = 'assets/icons/mi_perfil/ICON_UBICACION.svg';
+const FONDO = 'assets/images/perfil/WP_Perfil.jpg';
+const FILTRO_ANALISIS = 'assets/icons/mi_perfil/FILTRO-ANALISIS.svg';
+const EXITOSO = 'assets/icons/agendar/iconos_EXITOSO.svg';
 
 //ICONOS REGISTRO E INICIAR SESION
 const FACEBOOK = 'assets/icons/registro_sesion/ICON_FB.svg';
@@ -58,6 +64,15 @@ const LAUNCH_LABORATORIOS =
 const LAUNCH_MEDICINA = 'assets/images/inicio_app/LAUNCH_IMG_MEDICINA.png';
 const LAUNCH_PASTILLERO = 'assets/images/inicio_app/LAUNCH_IMG_PASTILLERO.png';
 const LAUNCH_REVIEWS = 'assets/images/inicio_app/LAUNCH_IMG_REVIEWS.png';
+
+//AVATARES
+const AVATAR_DR1 = 'assets/avatar/AVATARES_DR1.png';
+const AVATAR_DR2 = 'assets/avatar/AVATARES_DR2.png';
+const AVATAR_DR3 = 'assets/avatar/AVATARES_DR3.png';
+const AVATAR_DRA1 = 'assets/avatar/AVATARES_DRA1.png';
+const AVATAR_DRA2 = 'assets/avatar/AVATARES_DRA2.png';
+const AVATAR_USER1 = 'assets/avatar/AVATARES_USER1.png';
+const AVATAR_USER2 = 'assets/avatar/AVATARES_USER2.png';
 
 //ICONOS GENERALES
 const REGRESAR = 'assets/icons/ICON_REGRESAR.svg';

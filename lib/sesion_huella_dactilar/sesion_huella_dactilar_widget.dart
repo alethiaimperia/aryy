@@ -31,12 +31,17 @@ class _SesionHuellaDactilarWidgetState
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SvgPicture.asset(
-                REGRESAR,
-                width: 30,
-                height: 30,
-                fit: BoxFit.cover,
-              ),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "Registrarse");
+                },
+                child: SvgPicture.asset(
+                  REGRESAR,
+                  width: 30,
+                  height: 30,
+                  fit: BoxFit.cover,
+                ),
+              )
             ],
           ),
         ),
@@ -50,15 +55,16 @@ class _SesionHuellaDactilarWidgetState
           onTap: () => FocusScope.of(context).unfocus(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      HUELLA_BLANCO,
+                      ARYY_LOGO_BLANCO,
                       width: 150,
                       fit: BoxFit.cover,
                     ),
@@ -93,9 +99,9 @@ class _SesionHuellaDactilarWidgetState
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         SvgPicture.asset(
-                          HUELLA_MORADO,
-                          width: 80,
-                          height: 80,
+                          HUELLA_BLANCO,
+                          width: 50,
+                          height: 50,
                           fit: BoxFit.cover,
                         ),
                         Padding(
@@ -118,33 +124,38 @@ class _SesionHuellaDactilarWidgetState
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(22, 90, 22, 20),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      LLAVE,
-                      width: 35,
-                      height: 35,
-                      fit: BoxFit.cover,
+                  padding: EdgeInsetsDirectional.fromSTEB(22, 90, 22, 20),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, "iniciarsesion");
+                    },
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          LLAVE,
+                          width: 35,
+                          height: 35,
+                          fit: BoxFit.cover,
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                          child: Text(
+                            'Acceder con contraseña',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Montserrat',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
                     ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: Text(
-                        'Acceder con contraseña',
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Montserrat',
-                              color:
-                                  FlutterFlowTheme.of(context).primaryBtnText,
-                              fontSize: 18,
-                              fontWeight: FontWeight.normal,
-                            ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+                  )),
             ],
           ),
         ),

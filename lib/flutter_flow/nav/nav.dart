@@ -1,15 +1,10 @@
 import 'dart:async';
-
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
-import '../flutter_flow_theme.dart';
-
 import '../../index.dart';
-import '../../main.dart';
-import 'serialization_util.dart';
-
+import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:go_router/go_router.dart';
 export 'package:go_router/go_router.dart';
+import 'serialization_util.dart';
 export 'serialization_util.dart';
 
 const kTransitionInfoKey = '__transition_info__';
@@ -34,6 +29,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/',
           builder: (context, _) => HomePageWidget(),
           routes: [
+            //-----------------------------------------------------------------------------------------------
+            //--------------------------------- INICIO, REGISTRO Y VERIFICACION ----------------------------
+            //----------------------------------------------------------------------------------------------
+
             FFRoute(
               name: 'HomePage',
               path: 'homePage',
@@ -50,9 +49,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => IniciarsesionWidget(),
             ),
             FFRoute(
-              name: 'olvidaste_contrasena',
-              path: 'olvidasteContrasena',
-              builder: (context, params) => OlvidasteContrasenaWidget(),
+              name: 'restablecer_contrasena',
+              path: 'restablecercontrasena',
+              builder: (context, params) => RestablerContrasenaWidget(),
             ),
             FFRoute(
               name: 'configurar_pin_datosbiometricos',
@@ -76,9 +75,28 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => CodigoVerificacionWidget(),
             ),
             FFRoute(
+              name: 'verificar_identidad',
+              path: 'verificaridentidad',
+              builder: (context, params) => VerificarIdentidadWidget(),
+            ),
+            FFRoute(
+              name: 'eres_tu',
+              path: 'erestu',
+              builder: (context, params) => EresTuWidget(),
+            ),
+
+            //---------------------------------------------------------------------------------------------------------------
+            //------------------------ BARRA LATERAL ------------------------------------------------------------------------
+            //---------------------------------------------------------------------------------------------------------------
+            FFRoute(
               name: 'Barra_lateral_perfil',
               path: 'barraLateralPerfil',
               builder: (context, params) => BarraLateralPerfilWidget(),
+            ),
+            FFRoute(
+              name: 'editar_perfil_paciente',
+              path: 'editarPerfilPaciente',
+              builder: (context, params) => EditarPerfilPacienteWidget(),
             ),
             FFRoute(
               name: 'Barra_lateral_favoritos',
@@ -122,7 +140,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
             FFRoute(
               name: 'nueva_ubicacion',
-              path: 'nuevaUbicacion',
+              path: 'nueva_ubicacion',
               builder: (context, params) => NuevaUbicacionWidget(),
             ),
             FFRoute(
@@ -130,6 +148,39 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               path: 'buscarEspecialista',
               builder: (context, params) => BuscarEspecialistaWidget(),
             ),
+            FFRoute(
+              name: 'confirmacion_de_cita',
+              path: 'confirmacionCita',
+              builder: (context, params) => ConfirmacionDeCitaWidget(),
+            ),
+            FFRoute(
+              name: 'para_mi',
+              path: 'paraMi',
+              builder: (context, params) => ParaMiWidget(),
+            ),
+            FFRoute(
+              name: 'para_otra_persona',
+              path: 'paraOtraPersona',
+              builder: (context, params) => ParaOtraPersonaWidget(),
+            ),
+            FFRoute(
+              name: 'reservar_cita',
+              path: 'reservarCita',
+              builder: (context, params) => ReservarCitaWidget(),
+            ),
+
+            //-------------------------------------------------------------------------------------------------
+            //-------------------------------- BARRA DE NAVEGACION---------------------------------------------
+            //------------------------------------------------------------------------------------------------
+            FFRoute(
+              name: 'mis_favoritos',
+              path: 'misFavoritos',
+              builder: (context, params) => MisFavoritosWidget(),
+            ),
+
+            //-----------------------------------------------------------------------------------------------------
+            //--------------------------- PAGINA PRINCIPAL---------------------------------------------------------
+            //----------------------------------------------------------------------------------------------------
             FFRoute(
               name: 'Home2',
               path: 'home2',

@@ -1,11 +1,9 @@
 import 'package:aryy_version8/styles/my_icons.dart';
-
 import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../next_page_tmp/switch_modo_oscuro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class RegistrarseWidget extends StatefulWidget {
   const RegistrarseWidget({Key? key}) : super(key: key);
@@ -19,6 +17,8 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
   TextEditingController? textController2;
   TextEditingController? textController3;
   TextEditingController? textController4;
+  late bool passwordVisibility1;
+  late bool passwordVisibility2;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -28,6 +28,8 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
     textController2 = TextEditingController();
     textController3 = TextEditingController();
     textController4 = TextEditingController();
+    passwordVisibility1 = false;
+    passwordVisibility2 = false;
   }
 
   @override
@@ -44,7 +46,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryBtnText,
+        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
         title: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(22, 0, 0, 0),
@@ -52,17 +54,17 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, "registrarse_iniciosesion");
-                },
-                child: SvgPicture.asset(
-                  REGRESAR,
-                  width: 30,
-                  height: 30,
-                  fit: BoxFit.cover,
-                ),
+              SvgPicture.asset(
+                REGRESAR,
+                width: 30,
+                height: 30,
+                fit: BoxFit.cover,
               ),
+//---------------------------  Alternar entre modo oscuro (solo para pruebas de responsive)  -----------------------------------------------------------------------------------------------------------------
+              Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
+                  child: DarkModeIcon(context)),
+//--------------------------------------------------------------------------------------------------------------------------------------------
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
                 child: InkWell(
@@ -70,7 +72,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                     Navigator.pushNamed(context, "iniciarsesion");
                   },
                   child: Text(
-                    'Inicar sesión',
+                    'Iniciar sesión',
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Montserrat',
                           color: Color(0xC586898C),
@@ -86,7 +88,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
         centerTitle: false,
         elevation: 0,
       ),
-      backgroundColor: FlutterFlowTheme.of(context).primaryBtnText,
+      backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -95,7 +97,8 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(22, 40, 22, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(
+                      0, 60, 0, 0), //TENIA 22 COMO MARGEN
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -129,10 +132,10 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
-                                    color: Color(0xFFD0B3FF),
+                                    color: Color(0x199966FF),
                                     offset: Offset(0, 0),
                                   )
                                 ],
@@ -150,10 +153,10 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .bodyText2
                                         .override(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.normal,
-                                        ),
+                                            fontFamily: 'Montserrat',
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.normal,
+                                            color: Color(0xFFCCCCCC)),
                                     enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
@@ -225,7 +228,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                   boxShadow: [
                                     BoxShadow(
                                       blurRadius: 4,
-                                      color: Color(0xFFD0B3FF),
+                                      color: Color(0x199966FF),
                                       offset: Offset(0, 0),
                                     )
                                   ],
@@ -243,10 +246,10 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.normal,
-                                          ),
+                                              fontFamily: 'Montserrat',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.normal,
+                                              color: Color(0xFFCCCCCC)),
                                       enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0x00000000),
@@ -295,6 +298,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                           fontSize: 16,
                                           fontWeight: FontWeight.normal,
                                         ),
+                                    keyboardType: TextInputType.emailAddress,
                                   ),
                                 ),
                               ),
@@ -318,7 +322,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                   boxShadow: [
                                     BoxShadow(
                                       blurRadius: 4,
-                                      color: Color(0xFFD0B3FF),
+                                      color: Color(0x199966FF),
                                       offset: Offset(0, 0),
                                     )
                                   ],
@@ -330,16 +334,16 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                   child: TextFormField(
                                     controller: textController3,
                                     autofocus: true,
-                                    obscureText: false,
+                                    obscureText: !passwordVisibility1,
                                     decoration: InputDecoration(
                                       hintText: 'Ingrese una contraseña',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.normal,
-                                          ),
+                                              fontFamily: 'Montserrat',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.normal,
+                                              color: Color(0xFFCCCCCC)),
                                       enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0x00000000),
@@ -378,6 +382,21 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                         borderRadius: const BorderRadius.only(
                                           topLeft: Radius.circular(4.0),
                                           topRight: Radius.circular(4.0),
+                                        ),
+                                      ),
+                                      suffixIcon: InkWell(
+                                        onTap: () => setState(
+                                          () => passwordVisibility1 =
+                                              !passwordVisibility1,
+                                        ),
+                                        focusNode:
+                                            FocusNode(skipTraversal: true),
+                                        child: Icon(
+                                          passwordVisibility1
+                                              ? Icons.visibility_outlined
+                                              : Icons.visibility_off_outlined,
+                                          color: Color(0xFF757575),
+                                          size: 22,
                                         ),
                                       ),
                                     ),
@@ -412,7 +431,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                   boxShadow: [
                                     BoxShadow(
                                       blurRadius: 4,
-                                      color: Color(0xFFD0B3FF),
+                                      color: Color(0x199966FF),
                                       offset: Offset(0, 0),
                                     )
                                   ],
@@ -424,16 +443,16 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                   child: TextFormField(
                                     controller: textController4,
                                     autofocus: true,
-                                    obscureText: false,
+                                    obscureText: !passwordVisibility2,
                                     decoration: InputDecoration(
                                       hintText: 'Confirme su contraseña',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.normal,
-                                          ),
+                                              fontFamily: 'Montserrat',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.normal,
+                                              color: Color(0xFFCCCCCC)),
                                       enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0x00000000),
@@ -472,6 +491,21 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                         borderRadius: const BorderRadius.only(
                                           topLeft: Radius.circular(4.0),
                                           topRight: Radius.circular(4.0),
+                                        ),
+                                      ),
+                                      suffixIcon: InkWell(
+                                        onTap: () => setState(
+                                          () => passwordVisibility2 =
+                                              !passwordVisibility2,
+                                        ),
+                                        focusNode:
+                                            FocusNode(skipTraversal: true),
+                                        child: Icon(
+                                          passwordVisibility2
+                                              ? Icons.visibility_outlined
+                                              : Icons.visibility_off_outlined,
+                                          color: Color(0xFF757575),
+                                          size: 22,
                                         ),
                                       ),
                                     ),
@@ -517,9 +551,9 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                             },
                           );
 
-                          context.pushNamed(
-                              'registrarse_formulario'); //DEFINO LA NAVEGACION DE ESTE MODO POR EL ASYNC
-                          //Navigator.pushNamed(context, "registrarse_formulario"); //NO ME SIRVE POR EL MOMENTO
+                          //context.pushNamed('Registrarse_formulario'); //NO ME SIRVE POR EL MOMENTO
+                          Navigator.pushNamed(
+                              context, "registrarse_formulario");
                         },
                         text: 'Registrarme',
                         options: FFButtonOptions(
@@ -562,7 +596,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Montserrat',
-                                      color: Color(0xC5B4B4B4),
+                                      color: Color(0xFFCCCCCC),
                                       fontWeight: FontWeight.w500,
                                     ),
                               ),
@@ -634,7 +668,6 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                   ),
                 ),
               ],
-              //BOTON
             ),
           ),
         ),
