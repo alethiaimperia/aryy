@@ -1,4 +1,4 @@
-import '../informacion_doctor.dart';
+import '../doctor/informacion_miniatura.dart';
 import '../next_page_tmp/switch_modo_oscuro.dart';
 import './agendar_cita_calendario.dart';
 import '../flutter_flow/app_state.dart';
@@ -8,7 +8,7 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import '../flutter_flow/togleIcon.dart';
 import 'package:flutter/material.dart';
 // Para pruebas y simulacion de api agendar_cita
-import './simulacion_api.dart';
+import 'simulacion_agendar_cita.dart';
 
 class AgendarCita extends StatefulWidget {
   const AgendarCita({Key? key}) : super(key: key);
@@ -18,6 +18,12 @@ class AgendarCita extends StatefulWidget {
 }
 
 class _AgendarCitaState extends State<AgendarCita> {
+  callback(action) {
+    setState(() {
+      action();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -118,7 +124,7 @@ class _AgendarCitaState extends State<AgendarCita> {
               mainAxisSize: MainAxisSize.max,
               children: [
 //---------------------------  FichaDoctor  ---------------------------------------------------------------------------------------------------
-                // Llamar la ficha del doctor
+                FichaDoctor(callbackFunction: callback),
 //--------------------------------------------------------------------------------------------------------------------------------------------
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 20),

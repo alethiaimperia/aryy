@@ -1,4 +1,6 @@
+import './metodos_de_pago.dart';
 import '../next_page_tmp/switch_modo_oscuro.dart';
+import '../opciones_de_pago/opciones_de_pago.dart';
 import '../flutter_flow/app_state.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -15,11 +17,7 @@ class MetodosDePago extends StatefulWidget {
 }
 
 class _MetodosDePagoState extends State<MetodosDePago> {
-  bool? checkboxListTileValue1;
-  bool? checkboxListTileValue2;
-  bool? checkboxListTileValue3;
-  bool? checkboxListTileValue4;
-  bool? checkboxListTileValue5;
+  bool? isCheckboxChecked;
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +60,7 @@ class _MetodosDePagoState extends State<MetodosDePago> {
         ),
         actions: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -88,7 +86,7 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                         () => FFAppState().toggleVar = !FFAppState().toggleVar);
                   },
                   value: FFAppState().toggleVar,
-                  onIcon: Icon(
+                  onIcon: const Icon(
                     Icons.favorite_sharp,
                     color: Colors.black,
                     size: 28,
@@ -115,12 +113,12 @@ class _MetodosDePagoState extends State<MetodosDePago> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 20),
+                  padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 20),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -136,116 +134,22 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Expanded(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
-                              child: Text(
-                                'Pago anticipado',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Montserrat',
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
-                              child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
-                                text: '\$600',
-                                options: FFButtonOptions(
-                                  width: 180,
-                                  height: 60,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .subtitle2
-                                      .override(
-                                        fontFamily: 'Montserrat',
-                                        color: Colors.white,
-                                      ),
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1,
-                                  ),
-                                  borderRadius: BorderRadius.circular(5),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
-                              child: Text(
-                                'En consultorio',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Montserrat',
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
-                              child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
-                                text: '\$800',
-                                options: FFButtonOptions(
-                                  width: 180,
-                                  height: 60,
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .subtitle2
-                                      .override(
-                                        fontFamily: 'Montserrat',
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                      ),
-                                  borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    width: 1,
-                                  ),
-                                  borderRadius: BorderRadius.circular(5),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    children: const [
+                      BotonMetodoPago(
+                          metodoPagoElegido: MetodoPago.pagoAnticipado),
+                      BotonMetodoPago(
+                          metodoPagoElegido: MetodoPago.pagoEnConsultorio),
                     ],
                   ),
                 ),
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -257,8 +161,8 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                             scrollDirection: Axis.vertical,
                             children: [
                               Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0, 0, 0, 10),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -275,310 +179,41 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                                   ],
                                 ),
                               ),
+//--------------------------------------------------------------------------------------------------------------------------------------------
+//---------------------------  Opciones de pago  ---------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------------------
+                              const OpciondePago(
+                                  icon: FontAwesomeIcons.ccVisa,
+                                  title: '*** 1234'),
+                              const OpciondePago(
+                                  icon: FontAwesomeIcons.ccMastercard,
+                                  title: '*** 5678'),
+                              const OpciondePago(
+                                  icon: FontAwesomeIcons.moneyBillWave,
+                                  title: 'correo@aryy.com'),
+                              const OpciondePago(
+                                  icon: FontAwesomeIcons.creditCard,
+                                  title: 'Agregar otro método de pago'),
                               Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          checkboxTheme: CheckboxThemeData(
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(25),
-                                            ),
-                                          ),
-                                          unselectedWidgetColor:
-                                              Color(0xFF95A1AC),
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue1 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue1 =
-                                                    newValue!);
-                                          },
-                                          title: Wrap(
-                                            crossAxisAlignment:
-                                                WrapCrossAlignment.center,
-                                            children: [
-                                              FaIcon(
-                                                FontAwesomeIcons.creditCard,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                size: 30,
-                                              ),
-                                              Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(10, 0, 0, 0),
-                                                  child: Text(
-                                                    'Agregar otro método de pago',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .title3
-                                                        .override(
-                                                          fontFamily:
-                                                              'Montserrat',
-                                                          fontSize: 15,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
-                                                  )),
-                                            ],
-                                          ),
-                                          tileColor: Color(0xFFF5F5F5),
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.leading,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          checkboxTheme: CheckboxThemeData(
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(25),
-                                            ),
-                                          ),
-                                          unselectedWidgetColor:
-                                              Color(0xFF95A1AC),
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue2 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue2 =
-                                                    newValue!);
-                                          },
-                                          title: Wrap(
-                                            crossAxisAlignment:
-                                                WrapCrossAlignment.center,
-                                            children: [
-                                              FaIcon(
-                                                FontAwesomeIcons.moneyBillWave,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                size: 30,
-                                              ),
-                                              Padding(
-                                                  padding:
-                                                      const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                          10, 0, 0, 0),
-                                                  child: Text(
-                                                    'correo@aryy.com',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .title3
-                                                        .override(
-                                                          fontFamily:
-                                                              'Montserrat',
-                                                          fontSize: 15,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
-                                                  )),
-                                            ],
-                                          ),
-                                          tileColor: Color(0xFFF5F5F5),
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.leading,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          checkboxTheme: CheckboxThemeData(
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(25),
-                                            ),
-                                          ),
-                                          unselectedWidgetColor:
-                                              Color(0xFF95A1AC),
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue3 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue3 =
-                                                    newValue!);
-                                          },
-                                          title: Wrap(
-                                            crossAxisAlignment:
-                                                WrapCrossAlignment.center,
-                                            children: [
-                                              FaIcon(
-                                                FontAwesomeIcons.ccMastercard,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                size: 30,
-                                              ),
-                                              Padding(
-                                                  padding:
-                                                      const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                          10, 0, 0, 0),
-                                                  child: Text(
-                                                    '*** 5678',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .title3
-                                                        .override(
-                                                          fontFamily:
-                                                              'Montserrat',
-                                                          fontSize: 15,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
-                                                  )),
-                                            ],
-                                          ),
-                                          tileColor: Color(0xFFF5F5F5),
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.leading,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          checkboxTheme: CheckboxThemeData(
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(25),
-                                            ),
-                                          ),
-                                          unselectedWidgetColor:
-                                              Color(0xFF95A1AC),
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue4 ??=
-                                              true,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue4 =
-                                                    newValue!);
-                                          },
-                                          title: Wrap(
-                                            crossAxisAlignment:
-                                                WrapCrossAlignment.center,
-                                            children: [
-                                              FaIcon(
-                                                FontAwesomeIcons.ccVisa,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                size: 40,
-                                              ),
-                                              Padding(
-                                                  padding:
-                                                      const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                          10, 0, 0, 0),
-                                                  child: Text(
-                                                    '*** 1234',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .title3
-                                                        .override(
-                                                          fontFamily:
-                                                              'Montserrat',
-                                                          fontSize: 15,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
-                                                  )),
-                                            ],
-                                          ),
-                                          tileColor: Color(0xFFF5F5F5),
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.leading,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0, 10, 0, 20),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 0, 5),
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(0, 0, 0, 5),
                                         child: Theme(
                                           data: ThemeData(
                                             unselectedWidgetColor:
                                                 Color(0xFF95A1AC),
                                           ),
                                           child: CheckboxListTile(
-                                            value: checkboxListTileValue5 ??=
-                                                true,
+                                            value: isCheckboxChecked ??= true,
                                             onChanged: (newValue) async {
-                                              setState(() =>
-                                                  checkboxListTileValue5 =
-                                                      newValue!);
+                                              setState(() => isCheckboxChecked =
+                                                  newValue!);
                                             },
                                             title: Text(
                                               'Acepto los Términos yu Condiciones, la Política de Privacidad y uso de mis datos.',
@@ -590,7 +225,9 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                                                     fontWeight: FontWeight.w300,
                                                   ),
                                             ),
-                                            tileColor: Color(0xFFF5F5F5),
+                                            tileColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryBackground,
                                             activeColor:
                                                 FlutterFlowTheme.of(context)
                                                     .primaryColor,
@@ -605,21 +242,21 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                                 ),
                               ),
                               Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0, 0, 0, 20),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            20, 0, 20, 0),
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(20, 0, 20, 0),
                                         child: FFButtonWidget(
                                           onPressed: () {
                                             print('Button pressed ...');
                                           },
-                                          text: 'Agendar ahora',
+                                          text: 'Confirmar Cita',
                                           options: FFButtonOptions(
                                             width: 130,
                                             height: 70,
@@ -635,7 +272,7 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                                                       fontWeight:
                                                           FontWeight.w500,
                                                     ),
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Colors.transparent,
                                               width: 1,
                                             ),
