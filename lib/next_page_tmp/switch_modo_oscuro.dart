@@ -1,4 +1,4 @@
-import 'package:aryy_version8/main.dart';
+import 'package:aryy_front/main.dart';
 import 'package:flutter/material.dart';
 import '../../flutter_flow/flutter_flow_theme.dart';
 

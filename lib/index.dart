@@ -36,7 +36,8 @@ export './home2/home2_widget.dart' show Home2Widget;
 export './restablecer_contrasena.dart' show RestablerContrasenaWidget;
 export './verificar_identidad.dart' show VerificarIdentidadWidget;
 export './eres_tu.dart' show EresTuWidget;
-export './barra_lateral/perfil_inicio.dart' show BarraLateralPerfil1Widget;
+export 'barra_lateral/perfil_inicio/perfil_inicio_widget.dart'
+    show BarraLateralPerfil1Widget;
 export './resultados_busqueda/resultados_busqueda_widget.dart'
     show ResultadosBusqueda;
 export './resultados_busqueda_doctor/resultados_busqueda_doctor_widget.dart'
@@ -44,3 +45,4 @@ export './resultados_busqueda_doctor/resultados_busqueda_doctor_widget.dart'
 export './agendar_cita_calendario/agendar_cita_calendario_widget.dart'
     show AgendarCita;
 export './metodos_de_pago/metodos_de_pago_widget.dart' show MetodosDePago;
+export './cerca_de_mi/cerca_de_mi_widget.dart' show CercaDeMi;

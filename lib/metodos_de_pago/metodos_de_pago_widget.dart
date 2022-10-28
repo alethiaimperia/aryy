@@ -1,6 +1,6 @@
-import './metodos_de_pago.dart';
+import 'componentes/boton_metodo_de_pago.dart';
 import '../next_page_tmp/switch_modo_oscuro.dart';
-import '../opciones_de_pago/opciones_de_pago.dart';
+import 'componentes/opciones_de_pago.dart';
 import '../flutter_flow/app_state.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -138,12 +138,14 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//---------------------------  Métodos de pago  -----------------------------------------------------------------------------------------------------------------
                     children: const [
                       BotonMetodoPago(
                           metodoPagoElegido: MetodoPago.pagoAnticipado),
                       BotonMetodoPago(
                           metodoPagoElegido: MetodoPago.pagoEnConsultorio),
                     ],
+//--------------------------------------------------------------------------------------------------------------------------------------------
                   ),
                 ),
                 Expanded(
@@ -179,9 +181,7 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                                   ],
                                 ),
                               ),
-//--------------------------------------------------------------------------------------------------------------------------------------------
 //---------------------------  Opciones de pago  ---------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------------------------------------------------------
                               const OpciondePago(
                                   icon: FontAwesomeIcons.ccVisa,
                                   title: '*** 1234'),
@@ -194,6 +194,7 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                               const OpciondePago(
                                   icon: FontAwesomeIcons.creditCard,
                                   title: 'Agregar otro método de pago'),
+//--------------------------------------------------------------------------------------------------------------------------------------------
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0, 10, 0, 20),

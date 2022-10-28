@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Prueba',
-              initialRoute: "agendar_cita",
+              initialRoute: "Perfil_inicio",
 
               // Pruebas responsivas y modo oscuro
               theme: ThemeData.light(),
@@ -30,8 +30,9 @@ class MyApp extends StatelessWidget {
                 "iniciarsesion": (_) => IniciarsesionWidget(),
                 "Registrarse": (_) => RegistrarseWidget(),
                 "registrarse_formulario": (_) => RegistrarseFormularioWidget(),
-                "home2_inicio": (_) => Home2Widget(),
+                "home": (_) => Home2Widget(),
                 "buscar_especialista": (_) => BuscarEspecialistaWidget(),
+                "cerda_de_mi": (_) => CercaDeMi(),
                 "resultado_busqueda": (_) => ResultadosBusqueda(),
                 "informacion_doctor": (_) => ResultadoBusquedaDoctor(),
                 "agendar_cita": (_) => AgendarCita(),
@@ -60,7 +61,7 @@ class MyApp extends StatelessWidget {
                 "registrarse_iniciosesion": (_) =>
                     MenuFrame(), //VISTA CON VIDEO DE FONDO
               },
-              home: AgendarCita());
+              home: BarraLateralPerfil1Widget());
         });
   }
 }

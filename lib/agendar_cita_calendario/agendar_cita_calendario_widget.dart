@@ -1,6 +1,6 @@
-import '../doctor/informacion_miniatura.dart';
+import 'componentes/vista_calendario.dart';
+import 'componentes/miniatura_doctor.dart';
 import '../next_page_tmp/switch_modo_oscuro.dart';
-import './agendar_cita_calendario.dart';
 import '../flutter_flow/app_state.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -8,7 +8,7 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import '../flutter_flow/togleIcon.dart';
 import 'package:flutter/material.dart';
 // Para pruebas y simulacion de api agendar_cita
-import 'simulacion_agendar_cita.dart';
+import 'simulacionAPI/simulacion_agendar_cita.dart';
 
 class AgendarCita extends StatefulWidget {
   const AgendarCita({Key? key}) : super(key: key);
@@ -124,10 +124,10 @@ class _AgendarCitaState extends State<AgendarCita> {
               mainAxisSize: MainAxisSize.max,
               children: [
 //---------------------------  FichaDoctor  ---------------------------------------------------------------------------------------------------
-                FichaDoctor(callbackFunction: callback),
+                const InformacionMiniaturaDoctorAgenda(),
 //--------------------------------------------------------------------------------------------------------------------------------------------
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 20),
+                  padding: const EdgeInsetsDirectional.fromSTEB(50, 20, 0, 25),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -147,9 +147,7 @@ class _AgendarCitaState extends State<AgendarCita> {
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//--------------------------------------------------------------------------------------------------------------------------------------------
 //---------------------------  Horarios a elegir por el paciente  -----------------------------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------------------------------------------------------
                       children: [
                         NavigationButton(context, Icons.keyboard_arrow_left),
                         Column(
@@ -172,6 +170,7 @@ class _AgendarCitaState extends State<AgendarCita> {
                         ),
                         NavigationButton(context, Icons.keyboard_arrow_right),
                       ],
+//--------------------------------------------------------------------------------------------------------------------------------------------
                     ),
                   ),
                 ),

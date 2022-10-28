@@ -1,4 +1,4 @@
-package com.example.aryy_version8
+package com.example.aryy_front
 
 import io.flutter.embedding.android.FlutterActivity
 
