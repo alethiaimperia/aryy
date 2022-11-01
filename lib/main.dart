@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Prueba',
-              initialRoute: "Perfil_inicio",
+              initialRoute: "barra_favoritos",
 
               // Pruebas responsivas y modo oscuro
               theme: ThemeData.light(),

@@ -1,4 +1,5 @@
 import 'package:aryy_front/flutter_flow/flutter_flow_util.dart';
+import 'package:aryy_front/styles/my_icons.dart';
 
 import '../../flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
@@ -96,7 +97,7 @@ class _MisFavoritosWidgetState extends State<MisFavoritosWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Image.asset(
-                                          'assets/images/AVATARES_DRA1.png',
+                                          AVATAR,
                                           width: 64,
                                           height: 64,
                                           fit: BoxFit.cover,
@@ -269,7 +270,7 @@ class _MisFavoritosWidgetState extends State<MisFavoritosWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Image.asset(
-                                          'assets/images/AVATARES_DR2.png',
+                                          AVATAR,
                                           width: 64,
                                           height: 64,
                                           fit: BoxFit.cover,
@@ -442,7 +443,7 @@ class _MisFavoritosWidgetState extends State<MisFavoritosWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Image.asset(
-                                          'assets/images/AVATARES_USER2.png',
+                                          AVATAR,
                                           width: 64,
                                           height: 64,
                                           fit: BoxFit.cover,
@@ -615,7 +616,7 @@ class _MisFavoritosWidgetState extends State<MisFavoritosWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Image.asset(
-                                          'assets/images/AVATARES_DR3.png',
+                                          AVATAR,
                                           width: 64,
                                           height: 64,
                                           fit: BoxFit.cover,
@@ -788,7 +789,7 @@ class _MisFavoritosWidgetState extends State<MisFavoritosWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Image.asset(
-                                          'assets/images/AVATARES_USER1.png',
+                                          AVATAR,
                                           width: 64,
                                           height: 64,
                                           fit: BoxFit.cover,
