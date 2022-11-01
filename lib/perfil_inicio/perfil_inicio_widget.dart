@@ -1,11 +1,12 @@
-import './componentes/listView_historial.dart';
-import './componentes/row_historial.dart';
 import './simulacion_API/simulacionAPI_perfil_inicio.dart';
-import '../../next_page_tmp/switch_modo_oscuro.dart';
-import '../../styles/my_icons.dart';
-import '../../flutter_flow/flutter_flow_theme.dart';
-import '../../flutter_flow/flutter_flow_widgets.dart';
+import '../next_page_tmp/switch_modo_oscuro.dart';
+import '../styles/my_icons.dart';
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+
+import 'componentes/column_historial.dart';
+import 'componentes/row_historial.dart';
 
 class BarraLateralPerfil1Widget extends StatefulWidget {
   const BarraLateralPerfil1Widget({Key? key}) : super(key: key);
@@ -164,16 +165,27 @@ class _BarraLateralPerfil1WidgetState extends State<BarraLateralPerfil1Widget> {
                         ))
                       ])),
 //---------------------------  Body  -----------------------------------------------------------------------------------------------------------------
+
               // ListView(
-              HistorialListView(
-                  title: "Historial de citas",
-                  simulacionDatosAPI: simulacionHistorialCitas),
-              HistorialListView(
-                  title: "Historial de compras",
-                  simulacionDatosAPI: simulacionHistorialCompras),
-              HistorialListView(
-                  title: "Historial de compras",
-                  simulacionDatosAPI: simulacionHistorialAanalisis),
+              Expanded(
+                  child: Column(mainAxisSize: MainAxisSize.max, children: [
+                Expanded(
+                    child: ListView(
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,
+                        scrollDirection: Axis.vertical,
+                        children: [
+                      HistorialColumn(
+                          data: simulacionHistorialCitas,
+                          title: 'Historial de citas'),
+                      HistorialColumn(
+                          data: simulacionHistorialCompras,
+                          title: 'Historial de compras'),
+                      HistorialColumn(
+                          data: simulacionHistorialAanalisis,
+                          title: 'Historial de análisis')
+                    ]))
+              ]))
             ]));
   }
 }

@@ -1,18 +1,19 @@
-import './barra_lateral.dart';
+import './barra_lateral_routes.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../styles/my_icons.dart';
 import 'package:flutter/material.dart';
 
-class NavigationDrawer extends StatefulWidget {
-  const NavigationDrawer({Key? key}) : super(key: key);
+class BarraLateralWidget extends StatefulWidget {
+  const BarraLateralWidget({Key? key}) : super(key: key);
 
   @override
-  _NavigationDrawerState createState() => _NavigationDrawerState();
+  _BarraLateralWidgetState createState() => _BarraLateralWidgetState();
 }
 
-class _NavigationDrawerState extends State<NavigationDrawer> {
+class _BarraLateralWidgetState extends State<BarraLateralWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
+//---------------------------  Constructor  -----------------------------------------------------------------------------------------------------------------
   @override
   Widget build(BuildContext contex) => Drawer(
           child: SingleChildScrollView(
@@ -22,6 +23,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
         ),
       ));
 
+//---------------------------  Barra lateral: Header  -----------------------------------------------------------------------------------------------------------------
   Widget buildHeader(BuildContext context) => Container(
         color: Colors.white12,
         padding: const EdgeInsetsDirectional.fromSTEB(25, 30, 10, 20),
@@ -57,6 +59,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
         ),
       );
 
+//---------------------------  Barra lateral: Opciones  -----------------------------------------------------------------------------------------------------------------
   Widget buildMenuItems(BuildContext contex) => Container(
           child: Wrap(
         runSpacing: 12, // espacios verticales

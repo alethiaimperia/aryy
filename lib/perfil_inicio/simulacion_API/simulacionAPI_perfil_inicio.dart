@@ -8,11 +8,6 @@ class Historial {
 
 // Simulacion de datos API
 
-class SimulacionHistorialAPI {
-  final List<Historial> simulacionHistorial;
-  SimulacionHistorialAPI(this.simulacionHistorial);
-}
-
 List<Historial> simulacionHistorialCitas = <Historial>[
   Historial(0, "Dr. Nombre Apellido Apellido", "Especialidad", "21/12/21"),
   Historial(0, "Dr. Nombre Apellido Apellido", "Especialidad", "15/11/21"),
@@ -34,4 +29,10 @@ List<Historial> simulacionHistorialCompras = <Historial>[
 List<Historial> simulacionHistorialAanalisis = <Historial>[
   Historial(3, "Paracetamo", "Tabletas: 550 mg", "21/12/21"),
   Historial(3, "Naproxeno", "Tabletas: 400 mg", "15/11/21"),
+];
+
+var simulacionDataAPI = [
+  simulacionHistorialCitas,
+  simulacionHistorialCompras,
+  simulacionHistorialAanalisis
 ];

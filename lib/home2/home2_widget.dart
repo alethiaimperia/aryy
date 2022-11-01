@@ -1,7 +1,8 @@
+import './componentes/puntaje_paciente.dart';
 import '../barra_lateral/barra_lateral_widget.dart';
 import '../buscar_especialista/buscar_especialista_widget.dart';
 import '../next_page_tmp/switch_modo_oscuro.dart';
-import '../next_page_tmp/transiciones.dart';
+import '../core/transiciones.dart';
 import '../barra_navegacion_inferior/barra_de_navegacion.dart';
 import '../styles/my_icons.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -9,6 +10,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'componentes/accion.dart';
 
 class Home2Widget extends StatefulWidget {
   const Home2Widget({Key? key}) : super(key: key);
@@ -20,8 +22,6 @@ class Home2Widget extends StatefulWidget {
 class _Home2WidgetState extends State<Home2Widget> {
   TextEditingController? textController;
 
-  final scaffoldKey = GlobalKey<ScaffoldState>();
-
   @override
   void initState() {
     super.initState();
@@ -30,109 +30,44 @@ class _Home2WidgetState extends State<Home2Widget> {
 
   @override
   Widget build(BuildContext context) {
+//------------------------------------- Simulacion datos -------------------------------------------------------------------------------------------------------------------------
+    Accion surtirReceta = Accion("Surtir", "receta", "RECETA",
+        [FlutterFlowTheme.of(context).primaryColor, const Color(0xFF7900FF)]);
+    Accion analisisClinicos = Accion("Análisis", "clínicos", "ESTUDIOS",
+        [const Color(0xFFB380FF), const Color(0xFFD0B3FF)]);
     return Scaffold(
-        key: scaffoldKey,
+        key: GlobalKey<ScaffoldState>(),
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
 //------------------------------------- App Bar -------------------------------------------------------------------------------------------------------------------------
         appBar: PreferredSize(
-          preferredSize: const Size(100, 100),
+          preferredSize: const Size(100, 120),
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(50, 40, 20, 0),
             child: AppBar(
               backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-              toolbarHeight: 100,
+              toolbarHeight: 80,
               elevation: 0,
               centerTitle: false,
               leading: SvgPicture.asset(
                 ISOTIPO,
               ),
-              title: Row(
+              title:
+//-----------------------------------  Alternar entre modo oscuro (solo para pruebas de responsive)  -----------------------------------------------------------------------------------------------------------------
+                  Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [DarkModeIcon(context)],
               ),
-              actions: [
-                Builder(
-                  builder: (context) => InkWell(
-                    onTap: () => Scaffold.of(context).openEndDrawer(),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Wrap(
-                              children: [
-                                Container(
-                                    width: 70,
-                                    height: 30,
-                                    decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        borderRadius: const BorderRadius.only(
-                                          bottomLeft: Radius.circular(25),
-                                          bottomRight: Radius.circular(0),
-                                          topLeft: Radius.circular(25),
-                                          topRight: Radius.circular(0),
-                                        )),
-                                    child: Center(
-                                        child: Text(
-                                      '96 pts',
-                                      textAlign: TextAlign.right,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Montserrat',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBtnText,
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 12,
-                                          ),
-                                    ))),
-                              ],
-                            )
-                          ],
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                borderRadius: BorderRadius.circular(13),
-                                border: Border.all(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  width: 3,
-                                ),
-                              ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.network(
-                                  'https://picsum.photos/seed/329/600',
-                                  width: 100,
-                                  height: 100,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                )
+              actions:
+//------------------------------------  Puntaje paciente  -----------------------------------------------------------------------------------------------------------------
+                  const [
+                PuntajePaciente(),
               ],
             ),
           ),
         ),
 //------------------------------------- Barra Lateral Izquierda -------------------------------------------------------------------------------------------------------------------------
-        endDrawer: const NavigationDrawer(),
+        endDrawer: const BarraLateralWidget(),
 //------------------------------------- Menu principal  -------------------------------------------------------------------------------------------------------------------------
         body: SafeArea(
           child: GestureDetector(
@@ -335,6 +270,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                       ],
                     ),
                   ),
+//------------------------------------- Acciones -------------------------------------------------------------------------------------------------------------------------
                   Padding(
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
@@ -343,205 +279,55 @@ class _Home2WidgetState extends State<Home2Widget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0, 0, 90, 0),
-                                child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Text(
-                                        'Acciones',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Montserrat',
-                                              color: const Color(0xFF999999),
-                                              fontSize: 18,
-                                            ),
-                                      ),
-                                    ]))
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 0, 75, 0),
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      'Acciones',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Montserrat',
+                                            color: const Color(0xFF999999),
+                                            fontSize: 18,
+                                          ),
+                                    ),
+                                  ]),
+                            ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 0, 75, 0),
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      'Acciones',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Montserrat',
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            fontSize: 18,
+                                          ),
+                                    ),
+                                  ]),
+                            )
                           ])),
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                              child: Material(
-                                color: Colors.transparent,
-                                elevation: 4,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Container(
-                                  width: 150,
-                                  height: 90,
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: [
-                                        FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        Color(0xFF7900FF)
-                                      ],
-                                      stops: [0, 1],
-                                      begin: const AlignmentDirectional(0, -1),
-                                      end: const AlignmentDirectional(0, 1),
-                                    ),
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          SvgPicture.asset(
-                                            RECETAS,
-                                            width: 40,
-                                            height: 40,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ],
-                                      ),
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            'Surtir',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.normal,
-                                                  fontFamily: 'Montserrat',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBtnText,
-                                                ),
-                                          ),
-                                          Text(
-                                            'receta',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontFamily: 'Montserrat',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBtnText,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  10, 0, 0, 0),
-                              child: Material(
-                                color: Colors.transparent,
-                                elevation: 4,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Container(
-                                  width: 150,
-                                  height: 90,
-                                  decoration: BoxDecoration(
-                                    gradient: const LinearGradient(
-                                      colors: [
-                                        Color(0xFFB380FF),
-                                        Color(0xFFD0B3FF)
-                                      ],
-                                      stops: [0, 1],
-                                      begin: AlignmentDirectional(0, -1),
-                                      end: AlignmentDirectional(0, 1),
-                                    ),
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          SvgPicture.asset(
-                                            ESTUDIOS,
-                                            width: 40,
-                                            height: 40,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ],
-                                      ),
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            'Análisis',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.normal,
-                                                  fontFamily: 'Montserrat',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBtnText,
-                                                ),
-                                          ),
-                                          Text(
-                                            'clínicos',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontFamily: 'Montserrat',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBtnText,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                        AccionWidget(accion: surtirReceta),
+                        AccionWidget(accion: analisisClinicos),
                       ],
                     ),
                   ),
+//------------------------------------- Próxima cita -------------------------------------------------------------------------------------------------------------------------
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(22, 30, 22, 0),
                     child: Row(
@@ -578,7 +364,7 @@ class _Home2WidgetState extends State<Home2Widget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Montserrat',
-                                      color: Color(0xFF7900FF),
+                                      color: const Color(0xFF7900FF),
                                       fontWeight: FontWeight.normal,
                                     ),
                               ),
@@ -732,11 +518,7 @@ class _Home2WidgetState extends State<Home2Widget> {
             //onTap: () => FocusScope.of(context).unfocus(),
           ),
         ),
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //------------------------------------- BARRA DE NAVEGACION -------------------------------------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
         bottomNavigationBar: GetBarradeNavegacion(context));
   }
 }

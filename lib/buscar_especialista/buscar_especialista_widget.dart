@@ -1,9 +1,9 @@
+import 'buscar_especialista_api/respuestaApi.dart';
 import '../backend/api_requests/api_calls.dart';
 import '../barra_navegacion_inferior/barra_de_navegacion.dart';
 import '../home2/home2_widget.dart';
-import '../next_page_tmp/transiciones.dart';
+import '../core/transiciones.dart';
 import '../core/clasificacion.dart';
-import 'buscar_especialista_api/respuestaApi.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -38,9 +38,7 @@ class _BuscarEspecialistaWidgetState extends State<BuscarEspecialistaWidget> {
     super.dispose();
   }
 
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //------------------------------------- API -------------------------------------------------------------------------------------------------------------------------
-
   late RespuestaApi respuestaApi;
   // Los datos extraidos de la respuesta de la api
   List<dynamic> listaDeDatos = [];

@@ -1,6 +1,12 @@
-// Propiedades de la barra lateral
 import '../index.dart';
 import 'package:flutter/material.dart';
+
+class OpcionBarraLateral {
+  IconData icono;
+  String titulo;
+  StatefulWidget route;
+  OpcionBarraLateral(this.icono, this.titulo, this.route);
+}
 
 List<OpcionBarraLateral> barraLateral = <OpcionBarraLateral>[
   OpcionBarraLateral(
@@ -24,10 +30,3 @@ List<OpcionBarraLateral> barraLateral = <OpcionBarraLateral>[
   OpcionBarraLateral(Icons.exit_to_app_outlined, "Cerrar sesión",
       const BarraLateralConfiguracionesWidget()),
 ];
-
-class OpcionBarraLateral {
-  IconData icono;
-  String titulo;
-  StatefulWidget route;
-  OpcionBarraLateral(this.icono, this.titulo, this.route);
-}

@@ -1,3 +1,4 @@
+import 'componentes/floating_card_widget.dart';
 import '../google_maps/google_maps_widget.dart';
 import '../next_page_tmp/switch_modo_oscuro.dart';
 import '../resultados_busqueda/componentes/botones_filtro_busqueda_widget.dart';
@@ -6,8 +7,6 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
-
-import 'componentes/floating_card_widget.dart';
 
 class CercaDeMi extends StatefulWidget {
   const CercaDeMi({Key? key}) : super(key: key);
@@ -180,8 +179,8 @@ class _CercaDeMiState extends State<CercaDeMi> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: const [
-//                            Expanded(child: GoogleMapsWidget()),
-                            Expanded(child: FloatingCard()),
+                            Expanded(child: GoogleMapsWidget()),
+//                            Expanded(child: FloatingCard()),
                           ],
                         ),
                       ),

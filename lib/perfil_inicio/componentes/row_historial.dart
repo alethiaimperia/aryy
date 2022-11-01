@@ -1,6 +1,6 @@
 import '../simulacion_API/simulacionAPI_perfil_inicio.dart';
-import '../../../core/clasificacion.dart';
-import '../../../flutter_flow/flutter_flow_theme.dart';
+import '../../core/clasificacion.dart';
+import '../../flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 
 class HistorialRow extends StatefulWidget {
@@ -17,10 +17,10 @@ class _HistorialRowState extends State<HistorialRow> {
   Widget build(BuildContext context) {
     return Column(children: [
       Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 35),
+          padding: const EdgeInsetsDirectional.fromSTEB(35, 0, 30, 25),
           child: Row(
               mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Column(
@@ -48,7 +48,7 @@ class _HistorialRowState extends State<HistorialRow> {
                     ]),
                 Column(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         widget.data.titulo,
