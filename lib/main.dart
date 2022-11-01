@@ -40,7 +40,6 @@ class MyApp extends StatelessWidget {
                 "eres_tu": (_) => EresTuWidget(),
 
                 //OPCIONES DE BARRA LATERAL
-
                 "barra_perfil": (_) => BarraLateralPerfilWidget(),
                 "editar_perfil_paciente": (_) =>
                     EditarPerfilPacienteWidget(), //vista nueva
@@ -66,6 +65,9 @@ class MyApp extends StatelessWidget {
                 "para_otra_persona": (_) => ParaOtraPersonaWidget(),
                 "reservar_cita": (_) => ReservarCitaWidget(),
                 "loading": (_) => Loading(),
+
+                //AGENDAR CITA CALENDARIO
+                "agendar_cita_calendario": (_) => AgendarCita(),
               },
               home: Loading());
         });

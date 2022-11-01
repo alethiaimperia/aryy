@@ -56,3 +56,7 @@ export './agendar_cita/para_mi_widget.dart' show ParaMiWidget;
 export './agendar_cita/para_otra_persona_widget.dart'
     show ParaOtraPersonaWidget;
 export './agendar_cita/reservar_cita_widget.dart' show ReservarCitaWidget;
+
+//---------------------- AGENDAR CITA CALENDARIO -------------------------------------
+export './agendar_cita_calendario/agendar_cita_calendario_widget.dart'
+    show AgendarCita;
