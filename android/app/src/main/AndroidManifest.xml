@@ -1,9 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.aryy_version8">
+    package="com.example.aryy_front">
    <application
-        android:label="aryy_version8"
+        android:label="aryy_front"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <!-- Google Maps API is added manually -->
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyDt8IRQqINYA7Tft6kiMkuw5ifbYUbn7ko"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

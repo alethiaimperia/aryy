@@ -1,3 +1,4 @@
+import '../../next_page_tmp/switch_modo_oscuro.dart';
 import '../../styles/my_icons.dart';
 import '../../flutter_flow/flutter_flow_drop_down.dart';
 import '../../flutter_flow/flutter_flow_theme.dart';
@@ -66,6 +67,8 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
       key: scaffoldKey,
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        centerTitle: false,
+        elevation: 0,
         automaticallyImplyLeading: false,
         title: Row(
           mainAxisSize: MainAxisSize.max,
@@ -74,7 +77,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
               padding: const EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
               child: InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, "editar_perfil_paciente");
+                  Navigator.pushNamed(context, "home");
                 },
                 child: SvgPicture.network(
                   REGRESAR,
@@ -98,9 +101,12 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
             ),
           ],
         ),
-        actions: [],
-        centerTitle: false,
-        elevation: 0,
+        actions: [
+          Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 40, 0),
+              child: DarkModeIcon(context))
+        ],
+        toolbarHeight: 80,
       ),
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
       body: SafeArea(
@@ -389,8 +395,6 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                           ),
                                                       textAlign:
                                                           TextAlign.start,
-                                                      keyboardType:
-                                                          TextInputType.text,
                                                     ),
                                                   ),
                                                 ),
@@ -551,8 +555,6 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                       FontWeight
                                                                           .w300,
                                                                 ),
-                                                        keyboardType:
-                                                            TextInputType.text,
                                                         textAlign:
                                                             TextAlign.start,
                                                       ),
@@ -716,8 +718,6 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                       FontWeight
                                                                           .w300,
                                                                 ),
-                                                        keyboardType:
-                                                            TextInputType.text,
                                                         textAlign:
                                                             TextAlign.start,
                                                       ),
@@ -766,7 +766,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                               dropDownValue1 =
                                                                   val),
                                                       width: 100,
-                                                      height: 45,
+                                                      height: 40,
                                                       textStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -805,19 +805,13 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                 .fromSTEB(
                                                             20, 0, 0, 0),
                                                     child: FlutterFlowDropDown(
-                                                      //--------- TIPO DE ENTRADA DE DATOS (TIMESTAMP)----------------------------------
-                                                      initialOption:
-                                                          dropDownValue2 ??=
-                                                              dateTimeFormat(
-                                                                  'd/M/y',
-                                                                  getCurrentTimestamp),
                                                       options: ['Option 1'],
                                                       onChanged: (val) =>
                                                           setState(() =>
                                                               dropDownValue2 =
                                                                   val),
                                                       width: 180,
-                                                      height: 45,
+                                                      height: 40,
                                                       textStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -873,7 +867,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                       ),
                                                       child: Container(
                                                         width: 300,
-                                                        height: 45,
+                                                        height: 40,
                                                         decoration:
                                                             BoxDecoration(
                                                           color: FlutterFlowTheme
@@ -999,9 +993,6 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                       FontWeight
                                                                           .normal,
                                                                 ),
-                                                            keyboardType:
-                                                                TextInputType
-                                                                    .text,
                                                           ),
                                                         ),
                                                       ),
@@ -1032,7 +1023,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                               onChanged: (val) => setState(
                                                   () => dropDownValue3 = val),
                                               width: 300,
-                                              height: 45,
+                                              height: 40,
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyText1
@@ -1066,7 +1057,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                 onChanged: (val) => setState(
                                                     () => dropDownValue4 = val),
                                                 width: 300,
-                                                height: 45,
+                                                height: 40,
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -1103,7 +1094,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                 onChanged: (val) => setState(
                                                     () => dropDownValue5 = val),
                                                 width: 300,
-                                                height: 45,
+                                                height: 40,
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -1157,7 +1148,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                       () =>
                                                           dropDownValue6 = val),
                                                   width: 80,
-                                                  height: 45,
+                                                  height: 40,
                                                   textStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -1202,7 +1193,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                     ),
                                                     child: Container(
                                                       width: 210,
-                                                      height: 45,
+                                                      height: 40,
                                                       decoration: BoxDecoration(
                                                         color: FlutterFlowTheme
                                                                 .of(context)
@@ -1335,17 +1326,9 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                     FontWeight
                                                                         .w300,
                                                               ),
-                                                          //keyboardType:TextInputType.phone,
                                                           keyboardType:
                                                               TextInputType
-                                                                  .number,
-                                                          validator: (value) {
-                                                            if (value!
-                                                                .isEmpty) {
-                                                              return "Escribe un numero de telefono";
-                                                            }
-                                                            return null;
-                                                          },
+                                                                  .phone,
                                                         ),
                                                       ),
                                                     ),
@@ -1367,7 +1350,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                             dropDownValue7 =
                                                                 val),
                                                     width: 80,
-                                                    height: 45,
+                                                    height: 40,
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .bodyText1
@@ -1413,7 +1396,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                       ),
                                                       child: Container(
                                                         width: 210,
-                                                        height: 45,
+                                                        height: 40,
                                                         decoration:
                                                             BoxDecoration(
                                                           color: FlutterFlowTheme
@@ -1546,17 +1529,9 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                       FontWeight
                                                                           .w300,
                                                                 ),
-                                                            //keyboardType:TextInputType.phone,
                                                             keyboardType:
                                                                 TextInputType
-                                                                    .number,
-                                                            validator: (value) {
-                                                              if (value!
-                                                                  .isEmpty) {
-                                                                return 'Escribe un numero de telefono+';
-                                                              }
-                                                              return null;
-                                                            },
+                                                                    .phone,
                                                           ),
                                                         ),
                                                       ),
@@ -1658,11 +1633,13 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                             ),
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//----------------------------------- TAB UBICACION ---------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------- TAB IDENTIDAD ---------------------------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                             SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Padding(
                                     padding:
@@ -1672,14 +1649,22 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
                                       children: [
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                           crossAxisAlignment:
-                                              CrossAxisAlignment.start,
+                                              CrossAxisAlignment.center,
                                           children: [
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.end,
                                               children: [
                                                 SvgPicture.asset(
                                                   IDENTIFICACION,
@@ -1752,7 +1737,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                               onChanged: (val) => setState(
                                                   () => dropDownValue8 = val),
                                               width: 300,
-                                              height: 45,
+                                              height: 40,
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyText1
@@ -1791,7 +1776,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                 ),
                                                 child: Container(
                                                   width: 300,
-                                                  height: 45,
+                                                  height: 40,
                                                   decoration: BoxDecoration(
                                                     color: FlutterFlowTheme.of(
                                                             context)
@@ -1923,14 +1908,6 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                     FontWeight
                                                                         .normal,
                                                               ),
-                                                      keyboardType:
-                                                          TextInputType.number,
-                                                      validator: (value) {
-                                                        if (value!.isEmpty) {
-                                                          return 'Numero de documento';
-                                                        }
-                                                        return null;
-                                                      },
                                                     ),
                                                   ),
                                                 ),
@@ -1944,7 +1921,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                 onChanged: (val) => setState(
                                                     () => dropDownValue9 = val),
                                                 width: 300,
-                                                height: 45,
+                                                height: 40,
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -1984,7 +1961,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                 ),
                                                 child: Container(
                                                   width: 300,
-                                                  height: 45,
+                                                  height: 40,
                                                   decoration: BoxDecoration(
                                                     color: FlutterFlowTheme.of(
                                                             context)
@@ -2117,16 +2094,6 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                                     FontWeight
                                                                         .normal,
                                                               ),
-
-                                                      //se supone no deje dejar guardar hastq ue ingreses datos al campoS
-                                                      keyboardType:
-                                                          TextInputType.number,
-                                                      validator: (value) {
-                                                        if (value!.isEmpty) {
-                                                          return 'Escribe tu numero de tarjeta';
-                                                        }
-                                                        return null;
-                                                      },
                                                     ),
                                                   ),
                                                 ),
@@ -2142,7 +2109,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                 text: 'Guardar',
                                                 options: FFButtonOptions(
                                                   width: 100,
-                                                  height: 45,
+                                                  height: 35,
                                                   color: Color(0xFF7900FF),
                                                   textStyle:
                                                       FlutterFlowTheme.of(
@@ -2177,20 +2144,33 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                             SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        22, 30, 22, 0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            22, 30, 22, 0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
                                       children: [
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                           crossAxisAlignment:
-                                              CrossAxisAlignment.start,
+                                              CrossAxisAlignment.center,
                                           children: [
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.end,
                                               children: [
                                                 SvgPicture.asset(
                                                   UBICACION,
@@ -2249,10 +2229,16 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
-                                          MainAxisAlignment.start,
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
                                           children: [
                                             SvgPicture.asset(
                                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/aryy-version1-2ra5ai/assets/jbvs2tw1kgoh/ICON_UBICACION.svg',
@@ -2268,8 +2254,10 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                                   10, 0, 0, 0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                                CrossAxisAlignment.center,
                                             children: [
                                               Padding(
                                                 padding: EdgeInsetsDirectional
@@ -2328,7 +2316,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
                                       },
                                       child: Container(
                                         width: 300,
-                                        height: 45,
+                                        height: 35,
                                         decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,

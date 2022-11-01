@@ -1,6 +1,4 @@
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'lat_lng.dart';
 //import 'lat_Ing.dart';
 
 class FFAppState {
@@ -21,14 +19,4 @@ class FFAppState {
   late SharedPreferences prefs;
 
   bool toggleVar = false;
-}
-
-LatLng? _latLngFromString(String? val) {
-  if (val == null) {
-    return null;
-  }
-  final split = val.split(',');
-  final lat = double.parse(split.first);
-  final lng = double.parse(split.last);
-  return LatLng(lat, lng);
 }

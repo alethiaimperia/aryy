@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:aryy_front/barra_lateral/barra_lateral_favoritos/barra_lateral_favoritos_widget.dart';
+
 import '../../index.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -94,14 +96,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => BarraLateralPerfilWidget(),
             ),
             FFRoute(
-              name: 'editar_perfil_paciente',
-              path: 'editarPerfilPaciente',
-              builder: (context, params) => EditarPerfilPacienteWidget(),
-            ),
-            FFRoute(
               name: 'Barra_lateral_favoritos',
               path: 'barraLateralFavoritos',
-              builder: (context, params) => BarraLateralFavoritosWidget(),
+              builder: (context, params) => MisFavoritosWidget(),
             ),
             FFRoute(
               name: 'Barra_lateral_recompensas',
@@ -147,35 +144,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'buscar_especialista',
               path: 'buscarEspecialista',
               builder: (context, params) => BuscarEspecialistaWidget(),
-            ),
-            FFRoute(
-              name: 'confirmacion_de_cita',
-              path: 'confirmacionCita',
-              builder: (context, params) => ConfirmacionDeCitaWidget(),
-            ),
-            FFRoute(
-              name: 'para_mi',
-              path: 'paraMi',
-              builder: (context, params) => ParaMiWidget(),
-            ),
-            FFRoute(
-              name: 'para_otra_persona',
-              path: 'paraOtraPersona',
-              builder: (context, params) => ParaOtraPersonaWidget(),
-            ),
-            FFRoute(
-              name: 'reservar_cita',
-              path: 'reservarCita',
-              builder: (context, params) => ReservarCitaWidget(),
-            ),
-
-            //-------------------------------------------------------------------------------------------------
-            //-------------------------------- BARRA DE NAVEGACION---------------------------------------------
-            //------------------------------------------------------------------------------------------------
-            FFRoute(
-              name: 'mis_favoritos',
-              path: 'misFavoritos',
-              builder: (context, params) => MisFavoritosWidget(),
             ),
 
             //-----------------------------------------------------------------------------------------------------
