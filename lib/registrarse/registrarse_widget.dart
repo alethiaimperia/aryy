@@ -1,3 +1,5 @@
+import './componentes/input_password_widget.dart';
+import './componentes/input_text_widget.dart';
 import './componentes/input_widget.dart';
 import '../styles/my_icons.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -91,7 +93,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(22, 40, 22, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(22, 40, 22, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -99,18 +101,16 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                       Column(
                         mainAxisSize: MainAxisSize.max,
                         children: const [
-                          InputWidget(
-                              hintText: 'Ingrese una usuario',
-                              inputType: InputType.text),
-                          InputWidget(
-                              hintText: 'Ingrese un correo',
-                              inputType: InputType.text),
-                          InputWidget(
-                              hintText: 'Ingrese una contraseña',
-                              inputType: InputType.password),
-                          InputWidget(
-                              hintText: 'Confirme su contraseña',
-                              inputType: InputType.password),
+                          InputTextWidget(hintText: 'Ingrese un usuario'),
+                          InputTextWidget(hintText: 'Ingrese un correo'),
+                          InputPasswordWidget(
+                            hintText: 'Ingrese una contraseña',
+                            hintLabelText: 'Al menos 8 caractéres',
+                          ),
+                          InputPasswordWidget(
+                            hintText: 'Confirme su contraseña',
+                            hintLabelText: 'Los campos no coinciden',
+                          )
                         ],
                       ),
                     ],
