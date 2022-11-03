@@ -47,7 +47,8 @@ class _IniciarsesionWidgetState extends State<IniciarsesionWidget> {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, "registrarse_iniciosesion");
+                  Navigator.pushNamed(
+                      context, "registrarse_iniciosesion"); //------
                 },
                 child: SvgPicture.asset(
                   REGRESAR,

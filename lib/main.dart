@@ -6,6 +6,10 @@ import './splash_screen.dart';
 import './vista_video/registrase_iniciarsesion.dart';
 import 'package:flutter/material.dart';
 
+import 'agendar_cita_calendario/para_mi.dart';
+import 'agendar_cita_calendario/para_otra_persona.dart';
+import 'agendar_cita_calendario/reservar_cita.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -21,7 +25,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Prueba',
-              initialRoute: "barra_favoritos",
+              initialRoute: "resultado_busqueda",
 
               // Pruebas responsivas y modo oscuro
               theme: ThemeData.light(),
@@ -38,15 +42,15 @@ class MyApp extends StatelessWidget {
                 "cerda_de_mi": (_) => CercaDeMi(),
                 "resultado_busqueda": (_) => ResultadosBusqueda(),
                 "informacion_doctor": (_) => ResultadoBusquedaDoctor(),
-                "agendar_cita": (_) => AgendarCita(),
-                "metodos_pago": (_) => MetodosDePago(),
                 "sesion_huella_dactilar": (_) => SesionHuellaDactilarWidget(),
                 "codigo_verificacion": (_) => CodigoVerificacionWidget(),
                 "restablecer_contrasena": (_) => RestablerContrasenaWidget(),
                 "verificar_identidad": (_) => VerificarIdentidadWidget(),
                 "eres_tu": (_) => EresTuWidget(),
 
-                //OPCIONES DE BARRA LATERAL
+                //---------------------------------------------------------------------------
+                //------------------OPCIONES DE BARRA LATERAL -------------------------------
+                //---------------------------------------------------------------------------
                 "Perfil_inicio": (_) => BarraLateralPerfil1Widget(),
                 "barra_perfil": (_) => BarraLateralPerfilWidget(),
                 "barra_ayuda": (_) => BarraLateralAyudaWidget(),
@@ -63,6 +67,15 @@ class MyApp extends StatelessWidget {
                 "nueva_ubicacion": (_) => NuevaUbicacionWidget(),
                 "registrarse_iniciosesion": (_) =>
                     MenuFrame(), //VISTA CON VIDEO DE FONDO
+
+                //--------------------------------------------------------------------------
+                //-------------------- AGENDAR CITA ---------------------------------------
+                //-------------------------------------------------------------------------
+                "agendar_cita": (_) => AgendarCita(),
+                "reservar_cita": (_) => ReservarCitaWidget(),
+                "metodos_pago": (_) => MetodosDePago(),
+                "para_mi": (_) => ParaMiWidget(),
+                "para_otra_persona": (_) => ParaOtraPersonaWidget(),
               },
               home: BarraLateralPerfil1Widget());
         });
