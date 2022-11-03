@@ -1,6 +1,7 @@
+import 'package:aryy_front/registrarse/componentes/registrarse_con.dart';
+
 import './componentes/input_password_widget.dart';
 import './componentes/input_text_widget.dart';
-import './componentes/input_widget.dart';
 import '../styles/my_icons.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -16,11 +17,18 @@ class RegistrarseWidget extends StatefulWidget {
 }
 
 class _RegistrarseWidgetState extends State<RegistrarseWidget> {
-  TextEditingController? textController1;
-  TextEditingController? textController2;
-  TextEditingController? textController3;
-  TextEditingController? textController4;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController textController1 = TextEditingController();
+  TextEditingController textController2 = TextEditingController();
+
+  bool isPasswordLongEnough = true;
+
+  onPasswordChange(String password) {
+    if (password.length < 8) return WarningType.passwordLength;
+    if (textController1.text != textController2.text) {
+      return WarningType.passwordMatch;
+    }
+    return WarningType.none;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +55,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                   child: DarkModeIcon(context)),
 //--------------------------------------------------------------------------------------------------------------------------------------------
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
                 child: InkWell(
                   onTap: () {
                     Navigator.pushNamed(context, "iniciarsesion");
@@ -79,7 +87,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(22, 40, 22, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(22, 40, 22, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -100,16 +108,18 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                     children: [
                       Column(
                         mainAxisSize: MainAxisSize.max,
-                        children: const [
-                          InputTextWidget(hintText: 'Ingrese un usuario'),
-                          InputTextWidget(hintText: 'Ingrese un correo'),
+                        children: [
+                          const InputTextWidget(hintText: 'Ingrese un usuario'),
+                          const InputTextWidget(hintText: 'Ingrese un correo'),
                           InputPasswordWidget(
+                            textController: textController1,
                             hintText: 'Ingrese una contraseña',
-                            hintLabelText: 'Al menos 8 caractéres',
+                            onChangeFunction: onPasswordChange,
                           ),
                           InputPasswordWidget(
+                            textController: textController2,
                             hintText: 'Confirme su contraseña',
-                            hintLabelText: 'Los campos no coinciden',
+                            onChangeFunction: onPasswordChange,
                           )
                         ],
                       ),
@@ -117,7 +127,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(22, 20, 22, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(22, 40, 22, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -147,7 +157,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                         text: 'Registrarme',
                         options: FFButtonOptions(
                           width: 300,
-                          height: 40,
+                          height: 55,
                           color: Color(0xFF7900FF),
                           textStyle:
                               FlutterFlowTheme.of(context).subtitle2.override(
@@ -155,7 +165,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                     color: Colors.white,
                                     fontWeight: FontWeight.w500,
                                   ),
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1,
                           ),
@@ -166,7 +176,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(22, 30, 22, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(22, 30, 22, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -185,69 +195,27 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Montserrat',
-                                      color: Color(0xFFCCCCCC),
+                                      color: const Color(0xFFCCCCCC),
                                       fontWeight: FontWeight.w500,
                                     ),
                               ),
                             ],
                           ),
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 20, 0, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
+                              children: const [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0, 0, 40, 0),
-                                  child: Container(
-                                    width: 70,
-                                    height: 70,
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xC5D9D9D9),
-                                        width: 1,
-                                      ),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 20, 20, 20),
-                                      child: SvgPicture.asset(
-                                        GOOGLE,
-                                        width: 40,
-                                        height: 40,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
+                                  child: RegistarseConButton(
+                                    iconName: GOOGLE,
                                   ),
                                 ),
-                                Container(
-                                  width: 70,
-                                  height: 70,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                      color: Color(0xC5D9D9D9),
-                                      width: 1,
-                                    ),
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20, 20, 20, 20),
-                                    child: SvgPicture.asset(
-                                      FACEBOOK,
-                                      width: 40,
-                                      height: 40,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
+                                RegistarseConButton(iconName: FACEBOOK),
                               ],
                             ),
                           ),

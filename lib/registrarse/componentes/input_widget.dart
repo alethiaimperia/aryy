@@ -7,29 +7,37 @@ class InputWidget extends StatefulWidget {
     this.textController,
     required this.hintText,
     required this.inputTextType,
+    required this.isOscureTextVisible,
     required this.appendComponent,
+    required this.suffixIcon,
+    required this.onChangeFunction,
+    required this.borderColor,
   });
 
   final TextEditingController? textController;
   final TextInputType inputTextType;
+  final bool isOscureTextVisible;
   final String hintText;
+  final Widget suffixIcon;
   final Widget appendComponent;
+  final Function onChangeFunction;
+  final Color borderColor;
 
   @override
   State<InputWidget> createState() => _InputWidgetState();
 }
 
 class _InputWidgetState extends State<InputWidget> {
-  late final Widget appendComponent;
-
   bool isVisible = false;
+  bool isPasswordEightCharacters = true;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0, 22, 0, 0),
       child: Material(
         color: Colors.transparent,
-        elevation: 2,
+        elevation: 1,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
@@ -38,11 +46,11 @@ class _InputWidgetState extends State<InputWidget> {
           height: 45,
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).secondaryBackground,
-            boxShadow: const [
+            boxShadow: [
               BoxShadow(
-                blurRadius: 4,
-                color: Color(0x199966FF),
-                offset: Offset(0, 0),
+                blurRadius: 2,
+                color: widget.borderColor,
+                offset: const Offset(0, 0),
               )
             ],
             borderRadius: BorderRadius.circular(20),
@@ -51,32 +59,16 @@ class _InputWidgetState extends State<InputWidget> {
             padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
             child: Wrap(children: [
               TextFormField(
+                onChanged: (password) => widget.onChangeFunction(password),
                 controller: widget.textController,
-                obscureText:
-                    widget.inputTextType == TextInputType.visiblePassword
-                        ? !isVisible
-                        : false,
+                obscureText: !widget.isOscureTextVisible,
                 autofocus: true,
                 decoration: InputDecoration(
-                  // Utilizar inherence later here !
-                  suffixIcon:
-                      widget.inputTextType == TextInputType.visiblePassword
-                          ? IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  isVisible = !isVisible;
-                                });
-                              },
-                              icon: Icon(isVisible
-                                  ? Icons.visibility
-                                  : Icons.visibility_off),
-                              splashRadius: 10,
-                            )
-                          : null,
+                  suffixIcon: widget.suffixIcon,
                   hintText: widget.hintText,
                   hintStyle: FlutterFlowTheme.of(context).bodyText2.override(
                       fontFamily: 'Montserrat',
-                      fontSize: 12,
+                      fontSize: 17,
                       fontWeight: FontWeight.normal,
                       color: const Color(0xFFCCCCCC)),
                   enabledBorder: const UnderlineInputBorder(
@@ -95,26 +87,6 @@ class _InputWidgetState extends State<InputWidget> {
                       width: 0,
                     ),
                     borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
-                  ),
-                  errorBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
-                  ),
-                  focusedErrorBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(4.0),
                       topRight: Radius.circular(4.0),
                     ),

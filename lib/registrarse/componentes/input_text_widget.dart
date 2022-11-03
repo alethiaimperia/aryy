@@ -10,15 +10,20 @@ class InputTextWidget extends StatefulWidget {
 }
 
 class _InputTextWidgetState extends State<InputTextWidget> {
-  bool isVisible = false;
-  bool isPasswordLongEnough = false;
-  bool isPasswordEqual = false;
+  late Widget notImplementedYet = const Text('');
+
+  onInputTextChange(String password) {}
+
   @override
   Widget build(BuildContext context) {
     return InputWidget(
       hintText: widget.hintText,
       inputTextType: TextInputType.name,
-      appendComponent: Text(''),
+      appendComponent: notImplementedYet,
+      suffixIcon: notImplementedYet,
+      onChangeFunction: onInputTextChange,
+      borderColor: Colors.transparent,
+      isOscureTextVisible: true,
     );
   }
 }
