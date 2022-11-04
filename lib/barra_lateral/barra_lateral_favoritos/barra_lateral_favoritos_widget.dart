@@ -1,19 +1,19 @@
-import 'package:aryy_front/flutter_flow/flutter_flow_util.dart';
-import 'package:aryy_front/styles/my_icons.dart';
-
+import '../../styles/my_icons.dart';
+import '../../flutter_flow/flutter_flow_util.dart';
 import '../../flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-class MisFavoritosWidget extends StatefulWidget {
-  const MisFavoritosWidget({Key? key}) : super(key: key);
+class BarraLateralFavoritosWidget extends StatefulWidget {
+  const BarraLateralFavoritosWidget({Key? key}) : super(key: key);
 
   @override
-  _MisFavoritosWidgetState createState() => _MisFavoritosWidgetState();
+  _BarraLateralFavoritosWidgetState createState() =>
+      _BarraLateralFavoritosWidgetState();
 }
 
-class _MisFavoritosWidgetState extends State<MisFavoritosWidget> {
+class _BarraLateralFavoritosWidgetState
+    extends State<BarraLateralFavoritosWidget> {
   double? ratingBarValue1;
   double? ratingBarValue2;
   double? ratingBarValue3;

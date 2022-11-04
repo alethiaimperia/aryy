@@ -1,5 +1,5 @@
 import '../simulacion_API/simulacionAPI_perfil_inicio.dart';
-import '../../core/clasificacion.dart';
+import '../../aryy_common_components/clasificacion.dart';
 import '../../flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 

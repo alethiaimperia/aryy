@@ -1,6 +1,3 @@
-import 'package:aryy_front/barra_lateral/barra_lateral_favoritos/barra_lateral_favoritos_widget.dart';
-import 'package:aryy_front/perfil_inicio/perfil_inicio_widget.dart';
-
 import './index.dart';
 import './splash_screen.dart';
 import './vista_video/registrase_iniciarsesion.dart';
@@ -20,8 +17,8 @@ class MyApp extends StatelessWidget {
         builder: (_, ThemeMode currentMode, __) {
           return MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'Prueba',
-              initialRoute: "barra_favoritos",
+              title: 'Aryy - Prueba',
+              initialRoute: "bienvenida",
 
               // Pruebas responsivas y modo oscuro
               theme: ThemeData.light(),
@@ -52,7 +49,7 @@ class MyApp extends StatelessWidget {
                 "barra_ayuda": (_) => BarraLateralAyudaWidget(),
                 "barra_configuraciones": (_) =>
                     BarraLateralConfiguracionesWidget(),
-                "barra_favoritos": (_) => MisFavoritosWidget(),
+                "barra_favoritos": (_) => BarraLateralFavoritosWidget(),
                 "barra_metodos": (_) => BarraLateralMetodopagoWidget(),
                 "barra_privacidad": (_) => BarraLateralPrivacidadWidget(),
                 "barra_promociones": (_) => BarraLateralPromocionesWidget(),
@@ -64,7 +61,7 @@ class MyApp extends StatelessWidget {
                 "registrarse_iniciosesion": (_) =>
                     MenuFrame(), //VISTA CON VIDEO DE FONDO
               },
-              home: BarraLateralPerfil1Widget());
+              home: HomePageWidget());
         });
   }
 }

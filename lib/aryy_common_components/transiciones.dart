@@ -1,7 +1,7 @@
-// Las animaciones de navegación entre vistas se guardarán aqui.
-
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/widgets.dart';
+
+// Las animaciones de navegación entre vistas se guardarán aqui.
 
 void CargarWidgetConTransicion(BuildContext context,
     StatefulWidget siguienteWidget, PageTransitionType pageTransitionType) {

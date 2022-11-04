@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'package:aryy_front/barra_lateral/barra_lateral_favoritos/barra_lateral_favoritos_widget.dart';
-
 import '../../index.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -98,7 +96,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Barra_lateral_favoritos',
               path: 'barraLateralFavoritos',
-              builder: (context, params) => MisFavoritosWidget(),
+              builder: (context, params) => BarraLateralFavoritosWidget(),
             ),
             FFRoute(
               name: 'Barra_lateral_recompensas',

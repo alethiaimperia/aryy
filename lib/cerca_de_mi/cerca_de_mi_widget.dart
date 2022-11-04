@@ -152,7 +152,7 @@ class _CercaDeMiState extends State<CercaDeMi> {
 //---------------------------  Alternar entre modo oscuro (solo para pruebas de responsive)  -----------------------------------------------------------------------------------------------------------------
             Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
-                child: DarkModeIcon(context)),
+                child: DarkModeIcon()),
 //--------------------------------------------------------------------------------------------------------------------------------------------
           ],
           centerTitle: false,

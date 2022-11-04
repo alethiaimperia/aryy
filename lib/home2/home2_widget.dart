@@ -1,8 +1,9 @@
+import '../aryy_common_components/appbar_widget.dart';
 import './componentes/puntaje_paciente.dart';
 import '../barra_lateral/barra_lateral_widget.dart';
 import '../buscar_especialista/buscar_especialista_widget.dart';
 import '../next_page_tmp/switch_modo_oscuro.dart';
-import '../core/transiciones.dart';
+import '../aryy_common_components/transiciones.dart';
 import '../barra_navegacion_inferior/barra_de_navegacion.dart';
 import '../styles/my_icons.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -43,26 +44,12 @@ class _Home2WidgetState extends State<Home2Widget> {
           preferredSize: const Size(100, 120),
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(50, 40, 20, 0),
-            child: AppBar(
-              backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-              toolbarHeight: 80,
-              elevation: 0,
-              centerTitle: false,
+            child: AryyAppBar(
               leading: SvgPicture.asset(
                 ISOTIPO,
               ),
-              title:
-//-----------------------------------  Alternar entre modo oscuro (solo para pruebas de responsive)  -----------------------------------------------------------------------------------------------------------------
-                  Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [DarkModeIcon(context)],
-              ),
-              actions:
-//------------------------------------  Puntaje paciente  -----------------------------------------------------------------------------------------------------------------
-                  const [
-                PuntajePaciente(),
-              ],
+              title: DarkModeIcon(),
+              actions: PuntajePaciente(),
             ),
           ),
         ),

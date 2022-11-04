@@ -50,7 +50,7 @@ class _SesionHuellaDactilarWidgetState
 //---------------------------  Alternar entre modo oscuro (solo para pruebas de responsive)  -----------------------------------------------------------------------------------------------------------------
           Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
-              child: DarkModeIcon(context)),
+              child: DarkModeIcon()),
 //--------------------------------------------------------------------------------------------------------------------------------------------
         ],
       ),
