@@ -1,4 +1,9 @@
 import 'dart:async';
+import 'package:aryy_front/barra_lateral/barra_lateral_favoritos/barra_lateral_favoritos_widget.dart';
+
+import '../../agendar_cita_calendario/para_mi.dart';
+import '../../agendar_cita_calendario/para_otra_persona.dart';
+import '../../agendar_cita_calendario/reservar_cita.dart';
 import '../../index.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -96,7 +101,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Barra_lateral_favoritos',
               path: 'barraLateralFavoritos',
-              builder: (context, params) => BarraLateralFavoritosWidget(),
+              builder: (context, params) => MisFavoritosWidget(),
             ),
             FFRoute(
               name: 'Barra_lateral_recompensas',
@@ -142,6 +147,34 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'buscar_especialista',
               path: 'buscarEspecialista',
               builder: (context, params) => BuscarEspecialistaWidget(),
+            ),
+            //-----------------------------------------------------------------------------------
+            //------------------------------AGENDARCITA ------------------------------------------
+            //------------------------------------------------------------------------------------
+            FFRoute(
+              name: 'agendar_cita',
+              path: 'agendar_cita_calendario',
+              builder: (context, params) => AgendarCita(),
+            ),
+            FFRoute(
+              name: 'metodo_pago',
+              path: 'metodos_de_pago',
+              builder: (context, params) => MetodosDePago(),
+            ),
+            FFRoute(
+              name: 'reservar_cita',
+              path: 'reservar_cita',
+              builder: (context, params) => ReservarCitaWidget(),
+            ),
+            FFRoute(
+              name: 'para_mi',
+              path: 'para_mi',
+              builder: (context, params) => ParaMiWidget(),
+            ),
+            FFRoute(
+              name: 'para_otra_persona',
+              path: 'para_otra_persona',
+              builder: (context, params) => ParaOtraPersonaWidget(),
             ),
 
             //-----------------------------------------------------------------------------------------------------

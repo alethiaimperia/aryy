@@ -108,7 +108,9 @@ class _ResultadosBusquedaState extends State<ResultadosBusqueda> {
                                 ),
                                 FFButtonWidget(
                                   onPressed: () {
-                                    print('Ver_horarios pressed ...');
+                                    //print('Ver_horarios pressed ...');
+                                    Navigator.pushNamed(
+                                        context, "agendar_cita");
                                   },
                                   text: 'Ver horarios',
                                   options: FFButtonOptions(

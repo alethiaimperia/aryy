@@ -1,7 +1,14 @@
+import 'package:aryy_front/barra_lateral/barra_lateral_favoritos/barra_lateral_favoritos_widget.dart';
+import 'package:aryy_front/perfil_inicio/perfil_inicio_widget.dart';
+
 import './index.dart';
 import './splash_screen.dart';
 import './vista_video/registrase_iniciarsesion.dart';
 import 'package:flutter/material.dart';
+
+import 'agendar_cita_calendario/para_mi.dart';
+import 'agendar_cita_calendario/para_otra_persona.dart';
+import 'agendar_cita_calendario/reservar_cita.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,8 +24,8 @@ class MyApp extends StatelessWidget {
         builder: (_, ThemeMode currentMode, __) {
           return MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'Aryy - Prueba',
-              initialRoute: "bienvenida",
+              title: 'Prueba',
+              initialRoute: "resultado_busqueda",
 
               // Pruebas responsivas y modo oscuro
               theme: ThemeData.light(),
@@ -35,21 +42,21 @@ class MyApp extends StatelessWidget {
                 "cerda_de_mi": (_) => CercaDeMi(),
                 "resultado_busqueda": (_) => ResultadosBusqueda(),
                 "informacion_doctor": (_) => ResultadoBusquedaDoctor(),
-                "agendar_cita": (_) => AgendarCita(),
-                "metodos_pago": (_) => MetodosDePago(),
                 "sesion_huella_dactilar": (_) => SesionHuellaDactilarWidget(),
                 "codigo_verificacion": (_) => CodigoVerificacionWidget(),
                 "restablecer_contrasena": (_) => RestablerContrasenaWidget(),
                 "verificar_identidad": (_) => VerificarIdentidadWidget(),
                 "eres_tu": (_) => EresTuWidget(),
 
-                //OPCIONES DE BARRA LATERAL
+                //---------------------------------------------------------------------------
+                //------------------OPCIONES DE BARRA LATERAL -------------------------------
+                //---------------------------------------------------------------------------
                 "Perfil_inicio": (_) => BarraLateralPerfil1Widget(),
                 "barra_perfil": (_) => BarraLateralPerfilWidget(),
                 "barra_ayuda": (_) => BarraLateralAyudaWidget(),
                 "barra_configuraciones": (_) =>
                     BarraLateralConfiguracionesWidget(),
-                "barra_favoritos": (_) => BarraLateralFavoritosWidget(),
+                "barra_favoritos": (_) => MisFavoritosWidget(),
                 "barra_metodos": (_) => BarraLateralMetodopagoWidget(),
                 "barra_privacidad": (_) => BarraLateralPrivacidadWidget(),
                 "barra_promociones": (_) => BarraLateralPromocionesWidget(),
@@ -60,8 +67,17 @@ class MyApp extends StatelessWidget {
                 "nueva_ubicacion": (_) => NuevaUbicacionWidget(),
                 "registrarse_iniciosesion": (_) =>
                     MenuFrame(), //VISTA CON VIDEO DE FONDO
+
+                //--------------------------------------------------------------------------
+                //-------------------- AGENDAR CITA ---------------------------------------
+                //-------------------------------------------------------------------------
+                "agendar_cita": (_) => AgendarCita(),
+                "reservar_cita": (_) => ReservarCitaWidget(),
+                "metodos_pago": (_) => MetodosDePago(),
+                "para_mi": (_) => ParaMiWidget(),
+                "para_otra_persona": (_) => ParaOtraPersonaWidget(),
               },
-              home: HomePageWidget());
+              home: BarraLateralPerfil1Widget());
         });
   }
 }
