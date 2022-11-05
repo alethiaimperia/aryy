@@ -1,3 +1,5 @@
+import 'package:aryy_front/styles/my_icons.dart';
+
 import '../flutter_flow/flutter_flow_radio_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -58,7 +60,7 @@ class _ReservarCitaWidgetState extends State<ReservarCitaWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Image.asset(
-                            'assets/images/AVATARES_USER2.png',
+                            AVATAR,
                             width: 40,
                             height: 40,
                             fit: BoxFit.cover,
@@ -111,7 +113,7 @@ class _ReservarCitaWidgetState extends State<ReservarCitaWidget> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SvgPicture.asset(
-                            'assets/images/ICON_CITAS-OFF.svg',
+                            CITAS,
                             width: 25,
                             height: 25,
                             fit: BoxFit.cover,
@@ -179,7 +181,7 @@ class _ReservarCitaWidgetState extends State<ReservarCitaWidget> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SvgPicture.asset(
-                            'assets/images/ICON_PIN-OFF.svg',
+                            PIN,
                             width: 25,
                             height: 25,
                             fit: BoxFit.cover,
@@ -329,7 +331,9 @@ class _ReservarCitaWidgetState extends State<ReservarCitaWidget> {
                                   ],
                                 ),
                               ),
-                              Padding(
+
+//---------------------------- ANNULLATO -------------------------------------------------------------------------------
+                              /*Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 18, 0, 0),
                                 child: Row(
@@ -378,8 +382,8 @@ class _ReservarCitaWidgetState extends State<ReservarCitaWidget> {
                                     ),
                                   ],
                                 ),
-                              ),
-                              Padding(
+                              ),*/
+                              /*Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                                 child: Row(
@@ -412,7 +416,7 @@ class _ReservarCitaWidgetState extends State<ReservarCitaWidget> {
                                     ),
                                   ],
                                 ),
-                              ),
+                              ),*/
                             ],
                           ),
                         ),

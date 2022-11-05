@@ -255,7 +255,8 @@ class _MetodosDePagoState extends State<MetodosDePago> {
                                             .fromSTEB(20, 0, 20, 0),
                                         child: FFButtonWidget(
                                           onPressed: () {
-                                            print('Button pressed ...');
+                                            Navigator.pushNamed(context,
+                                                'loading_confirmacion_cita');
                                           },
                                           text: 'Confirmar Cita',
                                           options: FFButtonOptions(

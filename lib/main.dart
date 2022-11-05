@@ -1,3 +1,4 @@
+import 'package:aryy_front/agendar_cita_calendario/loading_widget.dart';
 import 'package:aryy_front/barra_lateral/barra_lateral_favoritos/barra_lateral_favoritos_widget.dart';
 import 'package:aryy_front/perfil_inicio/perfil_inicio_widget.dart';
 
@@ -6,6 +7,8 @@ import './splash_screen.dart';
 import './vista_video/registrase_iniciarsesion.dart';
 import 'package:flutter/material.dart';
 
+import 'agendar_cita_calendario/agregar_tarjeta_widget.dart';
+import 'agendar_cita_calendario/nuevo_metodo_pago_widget.dart';
 import 'agendar_cita_calendario/para_mi.dart';
 import 'agendar_cita_calendario/para_otra_persona.dart';
 import 'agendar_cita_calendario/reservar_cita.dart';
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Prueba',
-              initialRoute: "resultado_busqueda",
+              initialRoute: "agendar_cita",
 
               // Pruebas responsivas y modo oscuro
               theme: ThemeData.light(),
@@ -76,6 +79,9 @@ class MyApp extends StatelessWidget {
                 "metodos_pago": (_) => MetodosDePago(),
                 "para_mi": (_) => ParaMiWidget(),
                 "para_otra_persona": (_) => ParaOtraPersonaWidget(),
+                "loading_confirmacion_cita": (_) => Loading(),
+                "agregar_tarjeta": (_) => AgregarTarjetaWidget(),
+                "nuevo_metodo_pago": (_) => NuevoMetodoPagoWidget(),
               },
               home: BarraLateralPerfil1Widget());
         });

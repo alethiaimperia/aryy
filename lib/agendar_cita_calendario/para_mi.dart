@@ -1,3 +1,5 @@
+import '../flutter_flow/flutter_flow_checkbox_group.dart';
+import '../flutter_flow/flutter_flow_radio_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -13,6 +15,9 @@ class ParaMiWidget extends StatefulWidget {
 }
 
 class _ParaMiWidgetState extends State<ParaMiWidget> {
+  List<String>? checkboxGroupValues;
+  String? radioButtonValue;
+  String? radioButtonValue2;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -48,7 +53,7 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(10, 30, 10, 0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -97,13 +102,14 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(16, 20, 16, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Column(
                           mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              width: 340,
+                              width: 400,
                               height: 45,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
@@ -111,8 +117,8 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    10, 15, 0, 0),
                                 child: AutoSizeText(
                                   'Nombre',
                                   textAlign: TextAlign.start,
@@ -129,7 +135,7 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                               child: Container(
-                                width: 340,
+                                width: 400,
                                 height: 45,
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
@@ -138,7 +144,7 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                                 ),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 0, 0, 0),
+                                      10, 15, 0, 0),
                                   child: AutoSizeText(
                                     'Apellidos',
                                     style: FlutterFlowTheme.of(context)
@@ -186,8 +192,7 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  //mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: [
                                     Container(
                                       width: 60,
@@ -199,7 +204,7 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                                       ),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            10, 0, 0, 0),
+                                            10, 15, 0, 0),
                                         child: Text(
                                           '+52',
                                           style: FlutterFlowTheme.of(context)
@@ -221,7 +226,7 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                                       ),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            10, 0, 0, 0),
+                                            10, 15, 0, 0),
                                         child: Text(
                                           '9612563654',
                                           style: FlutterFlowTheme.of(context)
@@ -238,6 +243,50 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                               ),
                             ],
                           ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 18, 0, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Text(
+                          '¿Esta es tu primer visita con este \nespecialista?',
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 18, 0, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        FlutterFlowRadioButton(
+                          options: ['Si', 'No'].toList(),
+                          onChanged: (val) =>
+                              setState(() => radioButtonValue = val),
+                          optionHeight: 25,
+                          textStyle:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.black,
+                                  ),
+                          buttonPosition: RadioButtonPosition.left,
+                          direction: Axis.horizontal,
+                          radioButtonColor: Color(0xFF7900FF),
+                          inactiveRadioButtonColor:
+                              FlutterFlowTheme.of(context).secondaryText,
+                          toggleable: false,
+                          horizontalAlignment: WrapAlignment.start,
+                          verticalAlignment: WrapCrossAlignment.start,
                         ),
                       ],
                     ),
@@ -272,58 +321,150 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: 'Pago anticipado',
-                                      options: FFButtonOptions(
-                                        width: 150,
-                                        height: 45,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                              fontSize: 14,
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0, 0, 0, 20),
+                                          child: FFButtonWidget(
+                                            onPressed: () {
+                                              Navigator.pushNamed(
+                                                  context, 'agregar_tarjeta');
+                                            },
+                                            text: 'Pago anticipado \$600',
+                                            options: FFButtonOptions(
+                                              width: 350,
+                                              height: 45,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .subtitle2
+                                                      .override(
+                                                        fontFamily:
+                                                            'Montserrat',
+                                                        color: Colors.white,
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                                width: 1,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
                                             ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1,
+                                          ),
                                         ),
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                    ),
-                                    FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: 'En consultorio',
-                                      options: FFButtonOptions(
-                                        width: 150,
-                                        height: 45,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily: 'Poppins',
+                                        FFButtonWidget(
+                                          onPressed: () {
+                                            print('Button pressed ...');
+                                          },
+                                          text: 'En consultorio \$800',
+                                          options: FFButtonOptions(
+                                            width: 350,
+                                            height: 45,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryBackground,
+                                            textStyle: FlutterFlowTheme.of(
+                                                    context)
+                                                .subtitle2
+                                                .override(
+                                                  fontFamily: 'Montserrat',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
+                                            borderSide: BorderSide(
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
-                                              fontSize: 14,
+                                              width: 1,
                                             ),
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                          width: 1,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
                                         ),
-                                        borderRadius: BorderRadius.circular(8),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16, 30, 16, 0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Expanded(
+                                      child: FlutterFlowCheckboxGroup(
+                                        options: [
+                                          'Acepto los Términos y Condiciones, la politica\nde Privacidad y el uso de mis datos.'
+                                        ],
+                                        onChanged: (val) => setState(
+                                            () => checkboxGroupValues = val),
+                                        activeColor:
+                                            FlutterFlowTheme.of(context)
+                                                .primaryColor,
+                                        checkColor: Colors.white,
+                                        checkboxBorderColor: Color(0xFF95A1AC),
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w300,
+                                            ),
+                                        initialized:
+                                            checkboxGroupValues != null,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16, 30, 16, 0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Expanded(
+                                      child: FFButtonWidget(
+                                        onPressed: () {
+                                          print('Button pressed ...');
+                                        },
+                                        text: 'Confirmar cita',
+                                        options: FFButtonOptions(
+                                          width: 300,
+                                          height: 40,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .subtitle2
+                                                  .override(
+                                                    fontFamily: 'Montserrat',
+                                                    color: Colors.white,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
+                                          borderSide: BorderSide(
+                                            color: Colors.transparent,
+                                            width: 1,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -331,49 +472,6 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                               ),
                             ],
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(16, 30, 16, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'El monto a pagar en PAGO ANTICIPADO es de \$600 MXN.',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Montserrat',
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                              child: Text(
-                                'El monto a pagar en CONSULTORIO es de \$800MXN.',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Montserrat',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                              ),
-                            ),
-                          ],
                         ),
                       ],
                     ),

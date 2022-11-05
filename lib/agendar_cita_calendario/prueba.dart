@@ -17,10 +17,10 @@ class ParaOtraPersonaWidget extends StatefulWidget {
 class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
   List<String>? checkboxGroupValues;
   String? dropDownValue;
-  String? radioButtonValue2;
   TextEditingController? textController1;
   TextEditingController? textController2;
-  String? radioButtonValue;
+  String? radioButtonValue1;
+  String? radioButtonValue2;
   TextEditingController? textController3;
   TextEditingController? textController4;
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -287,7 +287,7 @@ class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'Relacion con el paciente*',
+                                    'Relacion con elpaciente*',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
@@ -378,7 +378,7 @@ class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
                                     FlutterFlowRadioButton(
                                       options: ['Si', 'No'].toList(),
                                       onChanged: (val) => setState(
-                                          () => radioButtonValue = val),
+                                          () => radioButtonValue1 = val),
                                       optionHeight: 25,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyText1
