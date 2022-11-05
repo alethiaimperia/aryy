@@ -1,5 +1,3 @@
-import 'package:aryy_front/barra_lateral/barra_lateral_favoritos/barra_lateral_favoritos_widget.dart';
-
 import '../index.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +12,7 @@ List<OpcionBarraLateral> barraLateral = <OpcionBarraLateral>[
   OpcionBarraLateral(
       Icons.person_outline_sharp, "Perfil", const BarraLateralPerfilWidget()),
   OpcionBarraLateral(
-      Icons.favorite_border, "Favoritos", const MisFavoritosWidget()),
+      Icons.favorite_border, "Favoritos", const BarraLateralFavoritosWidget()),
   OpcionBarraLateral(Icons.emoji_events_outlined, "Recompensas",
       const BarraLateralRecompensasWidget()),
   OpcionBarraLateral(Icons.discount_outlined, "Promociones",

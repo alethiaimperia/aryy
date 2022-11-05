@@ -88,7 +88,7 @@ class _NuevaUbicacionWidgetState extends State<NuevaUbicacionWidget> {
 //---------------------------  Alternar entre modo oscuro (solo para pruebas de responsive)  -----------------------------------------------------------------------------------------------------------------
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 40, 0),
-            child: DarkModeIcon(context),
+            child: DarkModeIcon(),
           )
         ],
         centerTitle: false,

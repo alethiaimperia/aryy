@@ -104,7 +104,7 @@ class _BarraLateralPerfilWidgetState extends State<BarraLateralPerfilWidget> {
         actions: [
           Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 40, 0),
-              child: DarkModeIcon(context))
+              child: DarkModeIcon())
         ],
         toolbarHeight: 80,
       ),

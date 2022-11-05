@@ -1,13 +1,14 @@
-import 'package:aryy_front/registrarse/componentes/registrarse_con.dart';
-
 import './componentes/input_password_widget.dart';
 import './componentes/input_text_widget.dart';
+import 'componentes/button_registrarse_con.dart';
 import '../styles/my_icons.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../next_page_tmp/switch_modo_oscuro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../aryy_common_components/formulario/button_widget.dart';
 
 class RegistrarseWidget extends StatefulWidget {
   const RegistrarseWidget({Key? key}) : super(key: key);
@@ -52,7 +53,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
 //---------------------------  Alternar entre modo oscuro (solo para pruebas de responsive)  -----------------------------------------------------------------------------------------------------------------
               Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
-                  child: DarkModeIcon(context)),
+                  child: DarkModeIcon()),
 //--------------------------------------------------------------------------------------------------------------------------------------------
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
@@ -100,6 +101,7 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                     ],
                   ),
                 ),
+//---------------------------  Input text: usuario, correo, contraseña  -----------------------------------------------------------------------------------------------------------------
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(22, 40, 22, 0),
                   child: Row(
@@ -126,14 +128,16 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                     ],
                   ),
                 ),
+//---------------------------  Registrase btn  -----------------------------------------------------------------------------------------------------------------
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(22, 40, 22, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      FFButtonWidget(
-                        onPressed: () async {
+                      BotonFormulario(
+                        text: 'Registrarme',
+                        onPressedFunction: () async {
                           await showDialog(
                             context: context,
                             builder: (alertDialogContext) {
@@ -149,32 +153,15 @@ class _RegistrarseWidgetState extends State<RegistrarseWidget> {
                               );
                             },
                           );
-
                           //context.pushNamed('Registrarse_formulario'); //NO ME SIRVE POR EL MOMENTO
                           Navigator.pushNamed(
                               context, "registrarse_formulario");
                         },
-                        text: 'Registrarme',
-                        options: FFButtonOptions(
-                          width: 300,
-                          height: 55,
-                          color: Color(0xFF7900FF),
-                          textStyle:
-                              FlutterFlowTheme.of(context).subtitle2.override(
-                                    fontFamily: 'Montserrat',
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                          borderSide: const BorderSide(
-                            color: Colors.transparent,
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
                       ),
                     ],
                   ),
                 ),
+//---------------------------  Registrase con redes sociales btn  -----------------------------------------------------------------------------------------------------------------
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(22, 30, 22, 0),
                   child: Row(

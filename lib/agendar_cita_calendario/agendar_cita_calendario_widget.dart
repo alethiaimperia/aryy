@@ -109,7 +109,7 @@ class _AgendarCitaState extends State<AgendarCita> {
 //---------------------------  Alternar entre modo oscuro (solo para pruebas de responsive)  -----------------------------------------------------------------------------------------------------------------
           Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 6, 0),
-              child: DarkModeIcon(context)),
+              child: const DarkModeIcon()),
 //--------------------------------------------------------------------------------------------------------------------------------------------
         ],
         centerTitle: false,
@@ -183,7 +183,7 @@ class _AgendarCitaState extends State<AgendarCita> {
                         padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 20),
                         child: FFButtonWidget(
                           onPressed: () {
-                            Navigator.pushNamed(context, 'reservar_cita');
+                            print('Button pressed ...');
                           },
                           text: 'Agendar ahora',
                           options: FFButtonOptions(
