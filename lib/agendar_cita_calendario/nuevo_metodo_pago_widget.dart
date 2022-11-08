@@ -109,6 +109,7 @@ class _NuevoMetodoPagoWidgetState extends State<NuevoMetodoPagoWidget> {
                     Expanded(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
+                        //prueba
                         children: [
                           InkWell(
                             onTap: () {

@@ -501,6 +501,7 @@ class _AgregarTarjetaWidgetState extends State<AgregarTarjetaWidget> {
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(8),
+                          //prueba
                         ),
                       ),
                     ),

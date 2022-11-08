@@ -19,6 +19,7 @@ const kTransitionInfoKey = '__transition_info__';
 
 class AppStateNotifier extends ChangeNotifier {
   bool showSplashImage = true;
+  //prueba
 
   void stopShowingSplashImage() {
     showSplashImage = false;
