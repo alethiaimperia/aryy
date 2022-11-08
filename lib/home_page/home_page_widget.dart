@@ -25,7 +25,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         toolbarHeight: 80,
         automaticallyImplyLeading: true,
 //---------------------------  Alternar entre modo oscuro (solo para pruebas de responsive)  -----------------------------------------------------------------------------------------------------------------
-        title: DarModeSwitch(context),
+        //title: DarModeSwitch(context),
         centerTitle: true,
         actions: [
           Padding(

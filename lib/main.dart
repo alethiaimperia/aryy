@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Prueba',
-              initialRoute: "agendar_cita",
+              initialRoute: "Registrarse",
 
               // Pruebas responsivas y modo oscuro
               theme: ThemeData.light(),
@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
                 "barra_ayuda": (_) => BarraLateralAyudaWidget(),
                 "barra_configuraciones": (_) =>
                     BarraLateralConfiguracionesWidget(),
-                "barra_favoritos": (_) => MisFavoritosWidget(),
+                //"barra_favoritos": (_) => MisFavoritosWidget(),
                 "barra_metodos": (_) => BarraLateralMetodopagoWidget(),
                 "barra_privacidad": (_) => BarraLateralPrivacidadWidget(),
                 "barra_promociones": (_) => BarraLateralPromocionesWidget(),

@@ -216,25 +216,36 @@ class _ParaMiWidgetState extends State<ParaMiWidget> {
                                         ),
                                       ),
                                     ),
-                                    Container(
-                                      width: 250,
-                                      height: 45,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
+                                    Expanded(
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            10, 15, 0, 0),
-                                        child: Text(
-                                          '9612563654',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Montserrat',
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                            30, 0, 0, 0),
+                                        child: Container(
+                                          width: 250,
+                                          height: 45,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                          ),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    10, 15, 0, 0),
+                                            child: Text(
+                                              '9612563654',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily:
+                                                            'Montserrat',
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                     ),

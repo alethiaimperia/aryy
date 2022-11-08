@@ -183,7 +183,7 @@ class _AgendarCitaState extends State<AgendarCita> {
                         padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 20),
                         child: FFButtonWidget(
                           onPressed: () {
-                            print('Button pressed ...');
+                            Navigator.pushNamed(context, 'reservar_cita');
                           },
                           text: 'Agendar ahora',
                           options: FFButtonOptions(

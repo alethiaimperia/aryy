@@ -1,47 +1,23 @@
 import '../flutter_flow/flutter_flow_checkbox_group.dart';
-import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ParaOtraPersonaWidget extends StatefulWidget {
-  const ParaOtraPersonaWidget({Key? key}) : super(key: key);
+class ParaMiWidget extends StatefulWidget {
+  const ParaMiWidget({Key? key}) : super(key: key);
 
   @override
-  _ParaOtraPersonaWidgetState createState() => _ParaOtraPersonaWidgetState();
+  _ParaMiWidgetState createState() => _ParaMiWidgetState();
 }
 
-class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
+class _ParaMiWidgetState extends State<ParaMiWidget> {
   List<String>? checkboxGroupValues;
-  String? dropDownValue;
-  TextEditingController? textController1;
-  TextEditingController? textController2;
-  String? radioButtonValue1;
-  String? radioButtonValue2;
-  TextEditingController? textController3;
-  TextEditingController? textController4;
+  String? radioButtonValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    textController1 = TextEditingController();
-    textController2 = TextEditingController();
-    textController3 = TextEditingController();
-    textController4 = TextEditingController();
-  }
-
-  @override
-  void dispose() {
-    textController1?.dispose();
-    textController2?.dispose();
-    textController3?.dispose();
-    textController4?.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -129,6 +105,7 @@ class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
                       children: [
                         Column(
                           mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
                               width: 340,
@@ -139,55 +116,11 @@ class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                                child: TextFormField(
-                                  controller: textController1,
-                                  autofocus: true,
-                                  obscureText: false,
-                                  decoration: InputDecoration(
-                                    hintText: 'Nombre',
-                                    enabledBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: Color(0x00000000),
-                                        width: 1,
-                                      ),
-                                      borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(4.0),
-                                        topRight: Radius.circular(4.0),
-                                      ),
-                                    ),
-                                    focusedBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: Color(0x00000000),
-                                        width: 1,
-                                      ),
-                                      borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(4.0),
-                                        topRight: Radius.circular(4.0),
-                                      ),
-                                    ),
-                                    errorBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: Color(0x00000000),
-                                        width: 1,
-                                      ),
-                                      borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(4.0),
-                                        topRight: Radius.circular(4.0),
-                                      ),
-                                    ),
-                                    focusedErrorBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: Color(0x00000000),
-                                        width: 1,
-                                      ),
-                                      borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(4.0),
-                                        topRight: Radius.circular(4.0),
-                                      ),
-                                    ),
-                                  ),
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    10, 15, 0, 0),
+                                child: AutoSizeText(
+                                  'Nombre',
+                                  textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -210,54 +143,9 @@ class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
                                 ),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 0, 0, 0),
-                                  child: TextFormField(
-                                    controller: textController2,
-                                    autofocus: true,
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      hintText: 'Apellidos',
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0x00000000),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0x00000000),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      errorBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0x00000000),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      focusedErrorBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0x00000000),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                    ),
+                                      10, 15, 0, 0),
+                                  child: AutoSizeText(
+                                    'Apellidos',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
@@ -269,186 +157,6 @@ class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
                               ),
                             ),
                           ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(16, 30, 16, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Expanded(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    'Relacion con elpaciente*',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    FlutterFlowDropDown(
-                                      options: [
-                                        'Abuela/abuelo',
-                                        'madre/padre',
-                                        'hermana/hermano'
-                                      ],
-                                      onChanged: (val) =>
-                                          setState(() => dropDownValue = val),
-                                      width: 320,
-                                      height: 45,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Poppins',
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                      hintText:
-                                          'Selecciona tu relacion con el paciente',
-                                      fillColor: FlutterFlowTheme.of(context)
-                                          .lineColor,
-                                      elevation: 2,
-                                      borderColor: Colors.transparent,
-                                      borderWidth: 0,
-                                      borderRadius: 0,
-                                      margin: EdgeInsetsDirectional.fromSTEB(
-                                          2, 2, 2, 2),
-                                      hidesUnderline: true,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(16, 30, 16, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Expanded(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    '¿Eres tutor del paciente?.',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    FlutterFlowRadioButton(
-                                      options: ['Si', 'No'].toList(),
-                                      onChanged: (val) => setState(
-                                          () => radioButtonValue1 = val),
-                                      optionHeight: 25,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Poppins',
-                                            color: Colors.black,
-                                          ),
-                                      buttonPosition: RadioButtonPosition.left,
-                                      direction: Axis.horizontal,
-                                      radioButtonColor:
-                                          FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                      inactiveRadioButtonColor:
-                                          Color(0x8A000000),
-                                      toggleable: false,
-                                      horizontalAlignment: WrapAlignment.start,
-                                      verticalAlignment:
-                                          WrapCrossAlignment.start,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(16, 20, 16, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Expanded(
-                          child: Text(
-                            '¿Esta es tu primer visita con este \nespecialista?',
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Montserrat',
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(16, 20, 16, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        FlutterFlowRadioButton(
-                          options: ['Si', 'No'].toList(),
-                          onChanged: (val) =>
-                              setState(() => radioButtonValue2 = val),
-                          optionHeight: 25,
-                          textStyle:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.black,
-                                  ),
-                          buttonPosition: RadioButtonPosition.left,
-                          direction: Axis.horizontal,
-                          radioButtonColor: Color(0xFF7900FF),
-                          inactiveRadioButtonColor:
-                              FlutterFlowTheme.of(context).secondaryText,
-                          toggleable: false,
-                          horizontalAlignment: WrapAlignment.start,
-                          verticalAlignment: WrapCrossAlignment.start,
                         ),
                       ],
                     ),
@@ -483,8 +191,7 @@ class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Container(
                                       width: 60,
@@ -496,137 +203,48 @@ class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
                                       ),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            10, 0, 0, 0),
-                                        child: TextFormField(
-                                          controller: textController3,
-                                          autofocus: true,
-                                          obscureText: false,
-                                          decoration: InputDecoration(
-                                            hintText: '+52',
-                                            hintStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2,
-                                            enabledBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            focusedBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            errorBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                          ),
+                                            10, 15, 0, 0),
+                                        child: Text(
+                                          '+52',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyText1,
-                                          keyboardType: TextInputType.number,
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'Poppins',
+                                                fontWeight: FontWeight.normal,
+                                              ),
                                         ),
                                       ),
                                     ),
-                                    Container(
-                                      width: 250,
-                                      height: 45,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
+                                    Expanded(
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            10, 0, 0, 0),
-                                        child: TextFormField(
-                                          controller: textController4,
-                                          autofocus: true,
-                                          obscureText: false,
-                                          decoration: InputDecoration(
-                                            hintText: 'Telefono',
-                                            hintStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2,
-                                            enabledBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            focusedBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            errorBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
+                                            30, 0, 0, 0),
+                                        child: Container(
+                                          width: 250,
+                                          height: 45,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                          ),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    10, 15, 0, 0),
+                                            child: Text(
+                                              '9612563654',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily:
+                                                            'Montserrat',
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
                                             ),
                                           ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1,
-                                          keyboardType: TextInputType.phone,
                                         ),
                                       ),
                                     ),
@@ -635,6 +253,53 @@ class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
                               ),
                             ],
                           ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(16, 20, 16, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            '¿Esta es tu primer visita con este \nespecialista?',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(16, 15, 16, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        FlutterFlowRadioButton(
+                          options: ['Si', 'No'].toList(),
+                          onChanged: (val) =>
+                              setState(() => radioButtonValue = val),
+                          optionHeight: 25,
+                          textStyle:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.black,
+                                  ),
+                          buttonPosition: RadioButtonPosition.left,
+                          direction: Axis.horizontal,
+                          radioButtonColor: Color(0xFF7900FF),
+                          inactiveRadioButtonColor:
+                              FlutterFlowTheme.of(context).secondaryText,
+                          toggleable: false,
+                          horizontalAlignment: WrapAlignment.start,
+                          verticalAlignment: WrapCrossAlignment.start,
                         ),
                       ],
                     ),
@@ -781,37 +446,28 @@ class _ParaOtraPersonaWidgetState extends State<ParaOtraPersonaWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(16, 30, 16, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: 'Confirmar cita',
-                            options: FFButtonOptions(
-                              width: 300,
-                              height: 40,
-                              color: FlutterFlowTheme.of(context).primaryColor,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .subtitle2
-                                  .override(
-                                    fontFamily: 'Montserrat',
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                          ),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    child: FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: 'Confirmar',
+                      options: FFButtonOptions(
+                        width: 350,
+                        height: 40,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        textStyle:
+                            FlutterFlowTheme.of(context).subtitle2.override(
+                                  fontFamily: 'Montserrat',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
                         ),
-                      ],
+                        borderRadius: BorderRadius.circular(8),
+                      ),
                     ),
                   ),
                 ],

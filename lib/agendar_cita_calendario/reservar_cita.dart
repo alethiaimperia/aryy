@@ -27,10 +27,15 @@ class _ReservarCitaWidgetState extends State<ReservarCitaWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
-        leading: Icon(
-          Icons.arrow_back,
-          color: FlutterFlowTheme.of(context).primaryText,
-          size: 25,
+        leading: InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, "agendar_cita");
+          },
+          child: Icon(
+            Icons.arrow_back,
+            color: FlutterFlowTheme.of(context).primaryText,
+            size: 25,
+          ),
         ),
         title: Text(
           'Reservar cita',
