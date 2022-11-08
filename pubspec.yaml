@@ -99,6 +99,7 @@ flutter:
       - assets/images/inicio_app/
       - assets/images/perfil/
       - assets/video/
+      #- assets/video/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
